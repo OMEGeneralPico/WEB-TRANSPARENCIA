@@ -1,0 +1,65 @@
+{
+  "CONCEJO DELIBERANTE": {
+     "Rentas": 4,
+     "Desarrollo Prod.": 10,
+     "Tesoreria": null,
+     "Contaduria": 15,
+     "Control Interno": null
+  },
+  "INTEDENCIA": {
+     "Rentas": 9322063,
+     "Desarrollo Prod.": 958928,
+     "Tesoreria": null,
+     "Contaduria": 45187585,
+     "Control Interno": null
+  },
+  "GOBIERNO": {
+     "Rentas": 578834,
+     "Desarrollo Prod.": 3626846,
+     "Tesoreria": null,
+     "Contaduria": 108688797,
+     "Control Interno": null
+  },
+  "PLANIFICACION": {
+     "Rentas": 3785722,
+     "Desarrollo Prod.": 2536269,
+     "Tesoreria": null,
+     "Contaduria": 30069819,
+     "Control Interno": 18302
+  },
+  "ESPACIOS PUBLICOS": {
+     "Rentas": 1300939,
+     "Desarrollo Prod.": 27508128,
+     "Tesoreria": null,
+     "Contaduria": 193588974,
+     "Control Interno": null
+  },
+  "DESARROLLO SOCIAL": {
+     "Rentas": 418810,
+     "Desarrollo Prod.": 10979585,
+     "Tesoreria": null,
+     "Contaduria": 86823862,
+     "Control Interno": 130000
+  },
+  "ECONOMIA": {
+     "Rentas": 378695,
+     "Desarrollo Prod.": 2273459,
+     "Tesoreria": null,
+     "Contaduria": 66074880,
+     "Control Interno": 5055524
+  },
+  "ORGANISMOS DESCENTRALIZADOS": {
+     "Rentas": 19771136,
+     "Desarrollo Prod.": 15554965,
+     "Tesoreria": null,
+     "Contaduria": 16046776,
+     "Control Interno": null
+  },
+  "NO PROGRAMATICO": {
+     "Rentas": null,
+     "Desarrollo Prod.": null,
+     "Tesoreria": 35739212,
+     "Contaduria": null,
+     "Control Interno": null
+  }
+}

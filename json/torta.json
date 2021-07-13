@@ -1,0 +1,101 @@
+{
+  "CONCEJO DELIBERANTE": {
+     "Bienes de capital": 2090215,
+     "Bienes de consumo": 3006843,
+     "Deuda publica": null,
+     "Gasto en personal": 35510629,
+     "Prestamos": null,
+     "Programas especiales": null,
+     "Ser. no personales": 5232520,
+     "Trabajos publicos": null,
+     "Transf. sociales": null
+  },
+  "INTEDENCIA": {
+     "Bienes de capital": 9322063,
+     "Bienes de consumo": 958928,
+     "Deuda publica": null,
+     "Gasto en personal": 45187585,
+     "Prestamos": null,
+     "Programas especiales": null,
+     "Ser. no personales": 12600093,
+     "Trabajos publicos": null,
+     "Transf. sociales": null
+  },
+  "GOBIERNO": {
+     "Bienes de capital": 578834,
+     "Bienes de consumo": 3626846,
+     "Deuda publica": null,
+     "Gasto en personal": 108688797,
+     "Prestamos": null,
+     "Programas especiales": null,
+     "Ser. no personales": 20718305,
+     "Trabajos publicos": null,
+     "Transf. sociales": 31423524
+  },
+  "PLANIFICACION": {
+     "Bienes de capital": 3785722,
+     "Bienes de consumo": 2536269,
+     "Deuda publica": null,
+     "Gasto en personal": 30069819,
+     "Prestamos": 18302,
+     "Programas especiales": null,
+     "Ser. no personales": 7404258,
+     "Trabajos publicos": 62091700,
+     "Transf. sociales": null
+  },
+  "ESPACIOS PUBLICOS": {
+     "Bienes de capital": 1300939,
+     "Bienes de consumo": 27508128,
+     "Deuda publica": null,
+     "Gasto en personal": 193588974,
+     "Prestamos": null,
+     "Programas especiales": null,
+     "Ser. no personales": 52019036,
+     "Trabajos publicos": null,
+     "Transf. sociales": null
+  },
+  "DESARROLLO SOCIAL": {
+     "Bienes de capital": 418810,
+     "Bienes de consumo": 10979585,
+     "Deuda publica": null,
+     "Gasto en personal": 86823862,
+     "Prestamos": 130000,
+     "Programas especiales": null,
+     "Ser. no personales": 28514614,
+     "Trabajos publicos": null,
+     "Transf. sociales": 24429483
+  },
+  "ECONOMIA": {
+     "Bienes de capital": 378695,
+     "Bienes de consumo": 2273459,
+     "Deuda publica": null,
+     "Gasto en personal": 66074880,
+     "Prestamos": 5055524,
+     "Programas especiales": null,
+     "Ser. no personales": 9070217,
+     "Trabajos publicos": null,
+     "Transf. sociales": 3057574
+  },
+  "ORGANISMOS DESCENTRALIZADOS": {
+     "Bienes de capital": 19771136,
+     "Bienes de consumo": 15554965,
+     "Deuda publica": null,
+     "Gasto en personal": 16046776,
+     "Prestamos": null,
+     "Programas especiales": null,
+     "Ser. no personales": 9372223,
+     "Trabajos publicos": null,
+     "Transf. sociales": null
+  },
+  "NO PROGRAMATICO": {
+     "Bienes de capital": null,
+     "Bienes de consumo": null,
+     "Deuda publica": 35739212,
+     "Gasto en personal": null,
+     "Prestamos": null,
+     "Programas especiales": 3817183,
+     "Ser. no personales": 128501249,
+     "Trabajos publicos": null,
+     "Transf. sociales": null
+  }
+}

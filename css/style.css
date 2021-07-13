@@ -1,0 +1,739 @@
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Titillium Web', sans-serif;
+  color: #0f594d;
+  background-color: #fcfeff;
+}
+@media only screen and (min-width: 1048px) {
+  body {
+    /* hide horizontal scroll bar in IE */
+    overflow-x: hidden;
+  }
+}
+
+a {
+  color: #93a748;
+  text-decoration: none;
+}
+
+p{
+  text-align: justify;
+}
+
+/* -------------------------------- 
+
+Main Components 
+
+-------------------------------- */
+.cd-header {
+  position: relative;
+  height: 100%;
+  background-color: #000000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+.cd-header .h1 {
+  width: 90%;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: bolder;
+  color: #f3f3f3;
+text-align: right;
+  font-size: 4rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: absolute;
+  left: 40%;
+
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+
+}
+.cd-header .h1 h1,
+.cd-header .h1 .h1_generalpico {
+  opacity: 0;
+  animation: mainFadeIn 0.8s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+  animation-delay: 1s;
+  
+}
+.cd-header .h1 .title .block {
+  width: 0%;
+  height: 100%;
+  background: #ffb510;
+  position: absolute;
+  animation: mainBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+  display: flex;
+  z-index: 1;
+}
+
+@keyframes mainBlock {
+  0% {
+    width: 0%;
+    left: 0;
+
+  }
+  50% {
+    width: 100%;
+    left: 0;
+
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+
+
+
+@keyframes mainFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media only screen and (min-width: 850px) {
+  .cd-header h1 {
+    font-size: calc(0,2em + 10vw);
+    font-weight: 600;
+  }
+}
+
+
+
+.cd-header .h1_generalpico {
+  display: block;
+  content: "General Pico";
+  font-family: 'Raleway';
+  font-size: xxx-large;
+  font-weight: 400;
+}
+
+.cd-fixed-background {
+  position: relative;
+  padding: 3em 5% 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.cd-fixed-background h2, .cd-fixed-background p {
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.cd-fixed-background .light-background h2, .cd-fixed-background .light-background p {
+  color: #0f594d;
+}
+.cd-fixed-background .cd-content::after {
+  /* phone image on small devices */
+  content: '';
+  display: block;
+  width: 100%;
+  padding: 60% 0;
+  margin: 2em auto 0;
+}
+
+.cd-fixed-background.img-1 {
+  background-image: url("../img/fondo0.jpg");
+}
+
+@media only screen and (min-width: 1150px) {
+
+  .cd-fixed-background {
+    height: 100%;
+    padding: 0;
+  }
+  .cd-fixed-background h2 {
+    font-size: 3.6rem;
+    font-weight: 300;
+  }
+  .cd-fixed-background p {
+    font-size: 1.8rem;
+    line-height: 1.8;
+  }
+  .cd-fixed-background .cd-content {
+    width: 50%;
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    bottom: auto;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  .cd-fixed-background .cd-content::after {
+    display: none !important;
+  }
+
+  .cd-fixed-background.img-2 {
+    background-image: url("../img/fondo5.png");
+  }
+  .cd-fixed-background.img-3 {
+    background-image: url("../img/fondo1.png");
+  }
+  .cd-fixed-background.img-4 {
+    background-image: url("../img/fondo2.png");
+  }
+  .cd-fixed-background.img-5 {
+    background-image: url("../img/fondo3.png");
+  }
+  .cd-fixed-background.img-6 {
+    background-image: url("../img/fondo4.png");
+  }
+  .cd-fixed-background.img-7 {
+    background-image: url("../img/fondo6.png");
+  }
+}
+
+/*Efecto de transicion de imagenes (no borrar) */
+@media only screen and (min-width: 1048px) {
+  .cd-fixed-background {
+    background-attachment: fixed;
+  }
+  /*
+  .cd-fixed-background .cd-content {
+    width: 40%;
+    left: 10%;
+  } */
+}
+
+.cd-vertical-nav {
+  position: fixed;
+  z-index: 2;
+  right: 3%;
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  display: none;
+  filter:invert(1);
+  mix-blend-mode: difference;
+}
+.cd-vertical-nav a {
+  display: block;
+  height: 40px;
+  width: 40px;
+  /* image replace */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background: transparent url(../img/cd-icon-arrow.svg) no-repeat center center;
+  -webkit-transition: opacity 0.2s 0s, visibility 0.2s 0s;
+  -moz-transition: opacity 0.2s 0s, visibility 0.2s 0s;
+  transition: opacity 0.2s 0s, visibility 0.2s 0s;
+}
+.cd-vertical-nav a.cd-prev {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+  margin-bottom: 10px;
+}
+.cd-vertical-nav a.inactive {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s 0s, visibility 0s 0.2s;
+  -moz-transition: opacity 0.2s 0s, visibility 0s 0.2s;
+  transition: opacity 0.2s 0s, visibility 0s 0.2s;
+}
+
+/*tamaño minimo para las flechas de navegacion */
+@media only screen and (min-width: 1200px) {
+  .cd-vertical-nav {
+    display: block;
+  }
+
+
+}
+
+.no-js .cd-vertical-nav {
+  display: none;
+}
+
+.contenedor-centrado{
+  margin-right: auto;
+}
+
+/* css del video */
+.contenedor-video{
+  overflow: hidden;
+  width:auto;
+  height: 100%;
+}
+
+
+
+/* Franja de color negro para la slide del video */
+.cajitatrans {
+    position: absolute;
+    top: 40%;
+    background: rgba(0, 0, 0, 0.7);
+    color: #f1f1f1;
+    padding: 10%;
+    white-space: nowrap;
+    display: flex;
+    justify-content: flex-end;
+    margin: auto;
+    left: 0%;
+    right: 0%;
+    
+}
+
+
+
+/*tamaño de todos los chart */
+.tamaño-grafico{
+  height: 200px;
+  width: auto;
+}
+
+/* Titulo que va arriba de los chart*/
+.titulografico{
+  font-size: medium;
+  text-align: auto;
+  justify-items: auto;
+  align-items: auto;
+  font-weight: 700;
+  font-size: x-large;
+}
+
+.cd-fixed-background.img-cierre{
+  position: relative;
+  height: 100%;
+  background-color: #fefcfe;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  z-index: 1;}
+
+  .header {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: #f1f1f1;
+  }
+  
+  /* The progress container (grey background) */
+  .progress-container {
+    width: 100%;
+    height: 8px;
+    background: #ccc;
+  }
+  
+  /* The progress bar (scroll indicator) */
+  .progress-bar {
+    height: 8px;
+    background: #00A27F;
+    width: 0%;
+  }
+  /* Style the navbar */
+  #navbar {
+    overflow: hidden;
+    background-color: #373737;
+  }
+  
+  /* Navbar links */
+  #navbar a {
+    float: left;
+    display: block;
+    color: #EAEEE2;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+  }
+
+  /* Page content */
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
+
+.customizacion-navbar{
+  font-family: 'Titillium Web', sans-serif;
+  height: 35px;
+}
+
+.elementos-navbar-custom{
+  padding: 5px;
+}
+.navbar-nav.navbar-center {
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+
+.contenedor-centrado{
+  margin-right: auto;
+  margin-left: auto;
+}
+
+img.zoom {
+  width:50px;
+  height:50px;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  -ms-transition: all .2s ease-in-out;
+}
+.transition {
+  -webkit-transform: scale(1.4); 
+  -moz-transform: scale(1.4);
+  -o-transform: scale(1.4);
+  transform: scale(1.4);
+}
+
+.grid-introduccion{
+  display:grid;
+  grid-template-columns: 100% ;
+  padding: 1em;
+}
+
+.grid-ultima{
+  display:grid;
+grid-template-columns: 100% ;
+gap:0,5em;
+justify-content: center;
+}
+
+.grid-centrado{
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align : justify;
+}
+.grid-mapa{
+  display:grid;
+  padding: 1em;
+  gap: 1em;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+  width: 60%;
+  max-height: 80%;
+  font-family: 'Titillium Web', sans-serif;
+}
+.grid-mapa div{
+ background-color: transparent;
+ padding: 1em;
+}
+ 
+/* Color de fondo para cada slide*/
+.cd-fixed-background.img-1 {
+  background-color: #EAEEE2;
+}
+.cd-fixed-background.img-2 {
+  background-color: #fcfeff;
+}
+.cd-fixed-background.img-3 {
+  background-color: #EAEEE2;
+}
+.cd-fixed-background.img-4 {
+  background-color: #fcfeff;
+}
+.cd-fixed-background.img-5 {
+  background-color: #EAEEE2;
+}
+.cd-fixed-background.img-6 {
+  background-color: #fcfeff;
+}
+.cd-fixed-background.img-7 {
+  background-color: #EAEEE2;
+}
+
+
+.grid-introduccion{
+  display:grid;
+  grid-template-columns: 100% ;
+  gap: 2em
+}
+
+/* primera letra mayuscula en slide */
+.first-letter {
+  font-size: 50px;
+  line-height: 50px;
+  font-weight: 900;
+}
+
+/*decorador detras del texto de la intro */
+.text-intro-wrapper{
+  border-left: solid 10px black;
+  background-color:rgba(255, 255, 255, 0.7);
+  padding: 1em;
+}
+
+/*grid de la slide de intendencia */
+.grid0{
+  display: grid;
+  grid-template-columns: 60% 40%;
+  align-items: center;
+  padding-top: 5em;
+  padding: 1em;
+  gap:1em;
+  width: 60%;
+  height:100%;
+  }
+
+  .grid-item-a{
+    border-left: solid 3px black;
+    padding: 1em;
+    grid-row: 1/ span 2;
+}
+
+.grid1 {
+  display: grid;
+  padding-top: 5em;
+  padding: 1em;
+  gap:1em;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 40% 60%;
+  height: 100%;
+  width: 60%;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1150px) {
+  .grid0{
+    grid-template-columns: 50% 50%;
+    width: 100%;
+  }
+  .grid1{
+    width:100%;
+  }
+  .grid-item-a{
+      grid-column: 1/ span 2;  
+  }  
+  
+}
+
+
+.grid-item{
+  border-left: solid 5px black;
+  padding: 1em;
+  background-color:rgba(114, 114, 114, 0.05);
+  height: 300px;
+  width: 100%;
+}
+
+.uno3{
+  grid-column: 1/span 2;
+  border-left: solid 3px black;
+  padding-left: 1em;
+  align-items: center;
+}
+
+  /*letra slides*/
+  .cd-fixed-background p {
+    font-size: calc(7px + 0.7vw);
+    line-height: 1.8;
+    font-family: 'Raleway', sans-serif !important;
+    color: #000000 !important;
+  }
+.cd-fixed-background h2{
+  font-size: calc(20px + 0.8vw);
+  font-weight: 600;
+  line-height: 1.8;
+  font-family: 'Titillium Web', sans-serif !important;
+  color: #000000 !important;
+
+}
+
+
+.img-intendenta{
+  width: calc(140px + 0.8vw);
+  background-color: rgba(255,255,255,0.7);
+  padding:1em;
+  border-top:solid 10px black;
+}
+
+/*
+.tam-texto-IntroCierre{
+  width: 50%;
+}
+*/
+
+.contenedor-texto-IntroCierre{
+  width: 40%;text-align: justify;
+}
+
+
+/*Mobile */
+@media only screen and (max-width: 500px) {
+  body{
+    position: relative;
+  }
+
+  .img-estadistica-mobile{
+    width:100%;
+  }
+
+  /*esto es para ocultar elementos que no queremos en mobile (en este caso la navbar) */
+  .ocultar-en-mobile{
+    display:none;
+  }
+  
+  .grid0{
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    width: 100%;
+  }
+
+  .grid-item-a{
+    width: 100%;
+    grid-column: 1/4;
+  }
+
+  .grid-item{
+    width: 100%;
+    grid-column: 1/4;
+  }
+
+  .grid1{
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+    width:100%;
+  }
+
+  .uno1{
+    grid-column: 1/4;
+  }
+
+  .uno2{
+    grid-column: 1/4;
+  }
+
+  .grid-mapa{
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+
+
+  .cd-fixed-background p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+  }
+
+  .img-intendenta{
+    width: 45%;
+  }
+
+
+  
+  .title{
+     font-size: calc(0.35em + 1vw);
+  }
+
+  .cd-header .h1 .h1_generalpico {
+    opacity: 0;
+    animation: mainFadeIn 0.8s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+    animation-delay: 1s;
+    font-size: calc(0.35em + 1vw);
+  }
+  
+  .tamaño-texto-inicioyfin{
+    width: 95%;
+  }
+
+  .ubicacion-h1-introcierre{
+    text-align: justify;
+  }
+
+  .tam-texto-IntroCierre{
+    width: 95%;
+  }
+
+  .contenedor-texto-IntroCierre{
+    width: 90%;text-align: justify;
+  }
+
+  .ancho-mobile{
+    width: 95vh;
+  }
+
+}
+
+/*tamaño intermedio */
+@media only screen and (min-width: 500px) and (max-width: 850px) {
+  .cd-header h1 {
+    font-size: 6vw;
+    font-weight: 600;
+    padding-left: 8%;
+  }
+
+  .contenedor-texto-IntroCierre{
+    width: 90%;
+    text-align: justify;
+  }
+}
+
+/*
+.grid-mapa2{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+}
+*/
+
+.grid-mapa2 {
+  display: grid;
+
+  gap:1em;
+  grid-template-columns: 1fr;
+ 
+  height: 100%;
+  width: 60%;
+  align-items: center;
+}
+
+.tam-map{
+  width: 30%;
+}
