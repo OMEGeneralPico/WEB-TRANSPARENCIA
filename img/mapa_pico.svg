@@ -9,7 +9,8 @@ width="351px" height="392px"
    shape-rendering="geometricPrecision"
    text-rendering="geometricPrecision"
    image-rendering="optimizeQuality"
-   fill-rule="evenodd"
+   fill-rule="eve
+   opacity=""nodd"
    clip-rule="evenodd"
    viewBox="0 0 2008 2244.24"
    id="svg48"
@@ -21,16 +22,19 @@ width="351px" height="392px"
  <style type="text/css">
         svg path{
         fill: teal;
-        stroke: white;
+  
+  opacity=""      stroke: white;
 
         width: 29%;
         margin: auto;
         transition: fill 0.3s;
-        background-color:white;
+   
+   opacity=""     background-color:white;
         }
         path:hover{
     fill:tomato;
 }
+opacity=""
 
 </style>
 </defs>
@@ -40,6 +44,7 @@ width="351px" height="392px"
    id="CorelCorpID_0Corel-Layer" />
   <path id="1"
    fill="#91387E"
+   opacity="0.51"
    stroke="#FEFEFE"
    stroke-width="16.67"
    stroke-miterlimit="22.9256"
@@ -47,6 +52,7 @@ width="351px" height="392px"
    id="path3" />
   <path id="2"
    fill="#91387E"
+   opacity="0.55"
    stroke="#FEFEFE"
    stroke-width="16.67"
    stroke-miterlimit="22.9256"
@@ -54,6 +60,7 @@ width="351px" height="392px"
    id="path5" />
   <path id="3"
    fill="#91387E"
+   opacity="0.38"
    stroke="#FEFEFE"
    stroke-width="16.67"
    stroke-miterlimit="22.9256"
@@ -61,6 +68,7 @@ width="351px" height="392px"
    id="path7" />
   <path id="4"
    fill="#91387E"
+   opacity="0.38"
    stroke="#FEFEFE"
    stroke-width="16.67"
    stroke-miterlimit="22.9256"
@@ -68,6 +76,7 @@ width="351px" height="392px"
    id="path9" />
   <path id="5"
    fill="#91387E"
+   opacity="0.53"
    stroke="#FEFEFE"
    stroke-width="16.67"
    stroke-miterlimit="22.9256"
@@ -75,6 +84,7 @@ width="351px" height="392px"
    id="path11" />
   <path id="6"
    fill="#91387E"
+   opacity="0.46"
    stroke="#FEFEFE"
    stroke-width="16.67"
    stroke-miterlimit="22.9256"
@@ -82,6 +92,7 @@ width="351px" height="392px"
    id="path13" />
   <path id="7"
    fill="#91387E"
+   opacity="0.36"
    stroke="#FEFEFE"
    stroke-width="16.67"
    stroke-miterlimit="22.9256"
@@ -89,6 +100,7 @@ width="351px" height="392px"
    id="path15" />
   <path id="8"
    fill="#91387E"
+   opacity="0.49"
    stroke="#FEFEFE"
    stroke-width="16.67"
    stroke-miterlimit="22.9256"
@@ -96,6 +108,7 @@ width="351px" height="392px"
    id="path17" />
   <path id="9"
    fill="#91387E"
+   opacity="0.24"
    stroke="#FEFEFE"
    stroke-width="16.67"
    stroke-miterlimit="22.9256"
@@ -103,6 +116,7 @@ width="351px" height="392px"
    id="path19" />
   <path id="10"
    fill="#91387E"
+   opacity="0.21"
    stroke="#FEFEFE"
    stroke-width="16.67"
    stroke-miterlimit="22.9256"
@@ -110,6 +124,7 @@ width="351px" height="392px"
    id="path21" />
   <path id="11"
    fill="#91387E"
+   opacity="0.35"
    stroke="#FEFEFE"
    stroke-width="16.67"
    stroke-miterlimit="22.9256"
@@ -117,6 +132,7 @@ width="351px" height="392px"
    id="path23" />
   <path id="12"
    fill="#91387E"
+   opacity="0.58"
    stroke="#FEFEFE"
    stroke-width="16.67"
    stroke-miterlimit="22.9256"
@@ -124,6 +140,7 @@ width="351px" height="392px"
    id="path25" />
   <path id="13"
    fill="#91387E"
+   opacity="0.26"
    stroke="#FEFEFE"
    stroke-width="16.67"
    stroke-miterlimit="22.9256"
@@ -131,6 +148,7 @@ width="351px" height="392px"
    id="path27" />
   <path id="14"
    fill="#91387E"
+   opacity="0.25"
    stroke="#FEFEFE"
    stroke-width="16.67"
    stroke-miterlimit="22.9256"
@@ -138,6 +156,7 @@ width="351px" height="392px"
    id="path29" />
   <path id="15"
    fill="#91387E"
+   opacity="0.35"
    stroke="#FEFEFE"
    stroke-width="16.67"
    stroke-miterlimit="22.9256"
@@ -145,6 +164,7 @@ width="351px" height="392px"
    id="path31" />
   <path id="16"
    fill="#91387E"
+   opacity="0.56"
    stroke="#FEFEFE"
    stroke-width="16.67"
    stroke-miterlimit="22.9256"
@@ -152,6 +172,7 @@ width="351px" height="392px"
    id="path33" />
   <path id="17"
    fill="#91387E"
+   opacity="0.74"
    stroke="#FEFEFE"
    stroke-width="16.67"
    stroke-miterlimit="22.9256"
@@ -159,6 +180,7 @@ width="351px" height="392px"
    id="path35" />
   <path id="18"
    fill="#91387E"
+   opacity="0.31"
    stroke="#FEFEFE"
    stroke-width="16.67"
    stroke-miterlimit="22.9256"
@@ -166,6 +188,7 @@ width="351px" height="392px"
    id="path37" />
   <path id="19"
    fill="#91387E"
+   opacity="0.54"
    stroke="#FEFEFE"
    stroke-width="16.67"
    stroke-miterlimit="22.9256"
@@ -173,6 +196,7 @@ width="351px" height="392px"
    id="path39" />
   <path id="20"
    fill="#91387E"
+   opacity="0.56"
    stroke="#FEFEFE"
    stroke-width="16.67"
    stroke-miterlimit="22.9256"
@@ -180,6 +204,7 @@ width="351px" height="392px"
    id="path41" />
   <path id="21"
    fill="#91387E"
+   opacity="0.37"
    stroke="#FEFEFE"
    stroke-width="16.67"
    stroke-miterlimit="22.9256"
@@ -188,6 +213,7 @@ width="351px" height="392px"
   <path id=22
    id="polygon45"
    fill="#91387e"
+   opacity="0.37"
 stroke="#fefefe"
 stroke-width="16.67"
 stroke-miterlimit="22.9256"
