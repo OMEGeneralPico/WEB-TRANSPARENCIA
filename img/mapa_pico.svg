@@ -54,6 +54,7 @@ width="351px" height="392px"
    id="path5" />
   <path id="3"
    fill="#91387E"
+   opacity = "0.5"
    stroke="#FEFEFE"
    stroke-width="16.67"
    stroke-miterlimit="22.9256"
