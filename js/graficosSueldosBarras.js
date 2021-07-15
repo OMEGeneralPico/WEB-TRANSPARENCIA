@@ -44,7 +44,7 @@ var chartsSueldos = {}
 var inViewSueldos = false;
 var sueldos = null;
 
-$.getJSON("./json/personal.json", function (dataorig) {
+$.getJSON("./json/PRESUPUESTO.json", function (dataorig) {
   sueldos = dataorig;
 })
 

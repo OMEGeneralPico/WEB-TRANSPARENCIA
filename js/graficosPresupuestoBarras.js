@@ -43,7 +43,7 @@ function generarchartbarra(etiquetas, data2, ctx) {
         //cutoutPercentage: 40,
         title: {
           display: true,
-          text: 'Top 3 Por Rubro',
+          text: 'Gasto ejecutado por unidad',
           font: {
             size: 20,
           },
@@ -62,13 +62,13 @@ var personalCharts = {}
 var inViewPersonal = false;
 var personal = null;
 
-$.getJSON("./json/personal.json", function (dataorig) {
+$.getJSON("json/PRESUPUESTO_UO.json", function (dataorig) {
   personal = dataorig
 })
 
 function animarPersonal() {
   for (var i = 0; i < Object.keys(personal).length - 1; i++) {
-    var idElement = "Personal" + i;
+    var idElement = "PresupuestoB" + i;
     if (isScrolledIntoView('#' + idElement)) {
       if (personalCharts[idElement]) { continue }
       personalCharts[idElement] = true;
