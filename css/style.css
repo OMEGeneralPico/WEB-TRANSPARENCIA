@@ -83,7 +83,7 @@ text-align: right;
 .cd-header .h1 .title .block {
   width: 0%;
   height: 100%;
-  background: #ffb510;
+  background: rgba(153, 070, 135, 1);
   position: absolute;
   animation: mainBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
   display: flex;
@@ -590,7 +590,7 @@ justify-content: center;
 
 
 .img-intendenta{
-  width: calc(140px + 0.8vw);
+  width: calc(140px + 5vw);
   background-color: rgba(255,255,255,0.7);
   padding:1em;
   border-top:solid 10px black;
@@ -605,6 +605,7 @@ justify-content: center;
 .contenedor-texto-IntroCierre{
   width: 40%;text-align: justify;
 }
+
 
 
 /*Mobile */
