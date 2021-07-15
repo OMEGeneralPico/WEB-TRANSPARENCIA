@@ -1,7 +1,9 @@
-function generarchart(etiquetas, data2, ctx) {
+function generarchartbarra(etiquetas, data2, ctx) {
+  //Chart.defaults.global.defaultFontFamily = "'Titillium Web'"
+  //Chart.defaults.global.defaultFontSize = 5
 
   return new Chart(ctx, {
-    type: 'doughnut',
+    type: 'bar',
     data: {
       labels: etiquetas,
       datasets: [{
@@ -33,12 +35,15 @@ function generarchart(etiquetas, data2, ctx) {
       }]
     },
     options: {
+      indexAxis: 'y',
       responsive: true,
       maintainAspectRatio: false,
       plugins: {
+
+        //cutoutPercentage: 40,
         title: {
           display: true,
-          text: 'Gasto ejecutado por rubro',
+          text: 'Gasto ejecutado por unidad',
           font: {
             size: 20,
           },
@@ -47,70 +52,48 @@ function generarchart(etiquetas, data2, ctx) {
             bottom: 30,
           },
         },
-        legend: {
-          display: true,
-          position: 'right',
-          align: 'middle'
-        }
+        legend: false
       }
     }
   });
 }
 
-function isScrolledIntoView(elem) {
+var personalCharts = {}
+var inViewPersonal = false;
+var personal = null;
 
-
-  var docViewTop = $(window).scrollTop();
-  var docViewBottom = docViewTop + $(window).height();
-
-  if ($(elem).offset()) {
-
-    var elemTop = $(elem).offset().top;
-    var elemBottom = elemTop + $(elem).height();
-    return ((elemTop <= docViewBottom) && (elemBottom >= docViewTop));
-  } else {
-    return false
-  }
-
-}
-
-var charts = {}
-var inView = false;
-var presupuestos = null;
-
-$.getJSON("./json/PRESUPUESTO.json", function (dataorig) {
-  presupuestos = dataorig;
+$.getJSON("json/PRESUPUESTO_UO.json", function (dataorig) {
+  personal = dataorig
 })
 
-
-function animarPresupuestos() {
-  for (var i = 0; i < Object.keys(presupuestos).length - 1; i++) {
-    var idElement = "Presupuesto" + i;
+function animarPersonal() {
+  for (var i = 0; i < Object.keys(personal).length - 1; i++) {
+    var idElement = "PresupuestoB" + i;
     if (isScrolledIntoView('#' + idElement)) {
-      if (charts[idElement]) { continue }
-      charts[idElement] = true;
-      var element = Object.keys(presupuestos)[i]
+      if (personalCharts[idElement]) { continue }
+      personalCharts[idElement] = true;
+      var element = Object.keys(personal)[i]
       var ctx = document.getElementById(idElement);
-      var etiquetas = Object.keys(presupuestos[element])
-      var data2 = etiquetas.map(key => presupuestos[element][key]);
-      if (inView) { return; }
-      inView = true;
-      var Presupuesto2 = generarchart(etiquetas, data2, ctx)
+      var etiquetas = Object.keys(personal[element])
+      var data2 = etiquetas.map(key => personal[element][key]);
+
+      if (inViewPersonal) { return; }
+      inViewPersonal = true;
+      var Presupuesto = generarchartbarra(etiquetas, data2, ctx)
     } else {
-      inView = false;
+      inViewPersonal = false;
     }
   }
 }
-
 $(window).scroll(function () {
 
-  animarPresupuestos();
+  animarPersonal();
 
 });
 
 $(window).load(function () {
 
 
-  animarPresupuestos();
+  animarPersonal();
 
 });
