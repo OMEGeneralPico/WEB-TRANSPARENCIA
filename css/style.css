@@ -57,7 +57,7 @@ Main Components
   font-weight: bolder;
   color: #f3f3f3;
 text-align: right;
-  font-size: 4rem;
+  font-size: calc(1em + 2vw);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: absolute;
@@ -83,7 +83,7 @@ text-align: right;
 .cd-header .h1 .title .block {
   width: 0%;
   height: 100%;
-  background: rgba(153, 070, 135, 1);
+  background: rgba(105, 190, 190, 1);
   position: absolute;
   animation: mainBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
   display: flex;
@@ -118,12 +118,6 @@ text-align: right;
   }
 }
 
-@media only screen and (min-width: 850px) {
-  .cd-header h1 {
-    font-size: calc(0,2em + 10vw);
-    font-weight: 600;
-  }
-}
 
 
 
@@ -131,7 +125,7 @@ text-align: right;
   display: block;
   content: "General Pico";
   font-family: 'Raleway';
-  font-size: xxx-large;
+  font-size: calc(0.2em + 2vw);
   font-weight: 400;
 }
 
@@ -303,7 +297,7 @@ text-align: right;
     top: 40%;
     background: rgba(0, 0, 0, 0.7);
     color: #f1f1f1;
-    padding: 10%;
+    padding: 7%;
     white-space: nowrap;
     display: flex;
     justify-content: flex-end;
@@ -356,7 +350,7 @@ text-align: right;
   /* The progress bar (scroll indicator) */
   .progress-bar {
     height: 8px;
-    background: #00A27F;
+    background: rgba(105, 190, 190, 1);
     width: 0%;
   }
   /* Style the navbar */
@@ -506,10 +500,15 @@ justify-content: center;
 }
 
 /*decorador detras del texto de la intro */
-.text-intro-wrapper{
+.contenedor-texto-IntroCierre{
   border-left: solid 10px black;
   background-color:rgba(255, 255, 255, 0.7);
   padding: 1em;
+
+
+    width: calc(400px + 10vw) ;
+    text-align: justify;
+  
 }
 
 /*grid de la slide de intendencia */
@@ -602,9 +601,7 @@ justify-content: center;
 }
 */
 
-.contenedor-texto-IntroCierre{
-  width: 40%;text-align: justify;
-}
+
 
 
 
@@ -677,7 +674,7 @@ justify-content: center;
     opacity: 0;
     animation: mainFadeIn 0.8s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
     animation-delay: 1s;
-    font-size: calc(0.35em + 1vw);
+
   }
   
   .tamaño-texto-inicioyfin{
@@ -703,17 +700,8 @@ justify-content: center;
 }
 
 /*tamaño intermedio */
-@media only screen and (min-width: 500px) and (max-width: 850px) {
-  .cd-header h1 {
-    font-size: 6vw;
-    font-weight: 600;
-    padding-left: 8%;
-  }
 
-  .contenedor-texto-IntroCierre{
-    width: 90%;
-    text-align: justify;
-  }
+
 }
 
 /*

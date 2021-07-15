@@ -38,7 +38,7 @@ function generarchart(etiquetas, data2, ctx) {
       plugins: {
         title: {
           display: true,
-          text: 'Top 3 Por Rubro',
+          text: 'Gasto ejecutado por rubro',
           font: {
             size: 20,
           },
@@ -57,45 +57,60 @@ function generarchart(etiquetas, data2, ctx) {
   });
 }
 
-var inView = false;
-
 function isScrolledIntoView(elem) {
+
+
   var docViewTop = $(window).scrollTop();
   var docViewBottom = docViewTop + $(window).height();
 
-  var elemTop = $(elem).offset().top;
-  var elemBottom = elemTop + $(elem).height();
-  return ((elemTop <= docViewBottom) && (elemBottom >= docViewTop));
+  if ($(elem).offset()) {
+
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+    return ((elemTop <= docViewBottom) && (elemBottom >= docViewTop));
+  } else {
+    return false
+  }
 
 }
 
-var charts = {
-}
+var charts = {}
+var inView = false;
+var presupuestos = null;
 
 $.getJSON("./json/PRESUPUESTO.json", function (dataorig) {
-  $(window).scroll(function () {
-
-    for (var i = 0; i < 7; i++) {
-
-
-      var idElement = "Presupuesto" + i;
-      if (isScrolledIntoView('#' + idElement)) {
-        if (charts[idElement]) {continue}
-        charts[idElement] = true;
-        var element = Object.keys(dataorig)[i]
-        var ctx = document.getElementById(idElement);
-        var etiquetas = Object.keys(dataorig[element])
-        var data2 = etiquetas.map(key => dataorig[element][key]);
-  
-        if (inView) { return; }
-        inView = true;
-
-        generarchart(etiquetas, data2, ctx)
-      } else {
-        inView = false;
-      }
-
-    };
-  });
-
+  presupuestos = dataorig;
 })
+
+
+function animarPresupuestos() {
+  for (var i = 0; i < Object.keys(presupuestos).length - 1; i++) {
+    var idElement = "Presupuesto" + i;
+    if (isScrolledIntoView('#' + idElement)) {
+      if (charts[idElement]) { continue }
+      charts[idElement] = true;
+      var element = Object.keys(presupuestos)[i]
+      var ctx = document.getElementById(idElement);
+      var etiquetas = Object.keys(presupuestos[element])
+      var data2 = etiquetas.map(key => presupuestos[element][key]);
+      if (inView) { return; }
+      inView = true;
+      var Presupuesto2 = generarchart(etiquetas, data2, ctx)
+    } else {
+      inView = false;
+    }
+  }
+}
+
+$(window).scroll(function () {
+
+  animarPresupuestos();
+
+});
+
+$(window).load(function () {
+
+
+  animarPresupuestos();
+
+});
