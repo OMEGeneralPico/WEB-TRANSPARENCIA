@@ -40,6 +40,7 @@ function generarchart(etiquetas, data2, ctx) {
           display: true,
           text: 'Gasto ejecutado por rubro',
           font: {
+            family: 'Titillium Web',
             size: 20,
           },
           padding: {
@@ -50,12 +51,16 @@ function generarchart(etiquetas, data2, ctx) {
         legend: {
           display: true,
           position: 'right',
-          align: 'middle'
+          align: 'middle',
+          labels: {font:{ family: 'Raleway' }}
         }
       }
     }
   });
 }
+
+
+
 
 function isScrolledIntoView(elem) {
 

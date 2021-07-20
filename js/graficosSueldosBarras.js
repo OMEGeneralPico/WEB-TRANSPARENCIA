@@ -7,34 +7,54 @@ function generarchartbarrasueldos(etiquetas, data2, ctx) {
     data: {
       labels: etiquetas,
       datasets: [{
-        label: 'Planta Permanente',
-        data: [80000, 95000, 40000],
+        label: 'Empleados',
+        data: data2,
         backgroundColor: [
-          'rgba(71, 123, 168, 1)'
+          'rgba(71, 123, 168, 1)',
+          'rgba(105, 190, 190, 1)',
+          'rgba(35, 145, 200, 1)',
+          'rgba(153, 070, 135, 1)',
+          'rgba(190, 135, 180, 1)',
+          'rgba(215, 90, 218, 1)',
+          'rgba(240, 150, 145, 1)',
+          'rgba(55, 55, 55,1)',
+          'rgba(235, 235, 225,1)'
         ],
-
-        borderWidth: 1
-      },
-      {
-        label: 'Contrato con aporte',
-        data: [50000, 75000, 25000],
-        backgroundColor: [
-
-          'rgba(105, 190, 190, 1)'
-
+        borderColor: [
+          'rgba(71, 123, 168, 0)',
+          'rgba(105, 190, 190, 0)',
+          'rgba(35, 145, 200, 0)',
+          'rgba(153, 070, 135, 0)',
+          'rgba(190, 135, 180, 0)',
+          'rgba(215, 90, 218, 0)',
+          'rgba(240, 150, 145, 0)',
+          'rgba(55, 55, 55,0)',
+          'rgba(235, 235, 225,0)'
         ],
-
         borderWidth: 1
       }]
     },
     options: {
-      scales: { x: { stacked: true }, y: { stacked: true } },
+      scales: {y:{ticks:{font:{family:'Raleway'}}},
+      x:{ticks:{font:{family:'Raleway'}}}},
+
+      
       responsive: true,
       maintainAspectRatio: false,
       plugins: {
-        //cutoutPercentage: 40,
-
-        legend: true
+        title: {
+          display: true,
+          text: 'Empleados por unidad',
+          font: {
+            family: 'Titillium Web',
+            size: 20,
+          },
+          padding: {
+            top: 10,
+            bottom: 30,
+          },
+        },
+        legend: false
       }
     }
   });
@@ -44,12 +64,12 @@ var chartsSueldos = {}
 var inViewSueldos = false;
 var sueldos = null;
 
-$.getJSON("./json/PRESUPUESTO.json", function (dataorig) {
+$.getJSON("./json/PERSONAL.json", function (dataorig) {
   sueldos = dataorig;
 })
 
 function animarSueldos() {
-  for (var i = 0; i < 1; i++) {
+  for (var i = 0; i < Object.keys(presupuestos).length - 1; i++) {
     var idElement = "Sueldos" + i;
     if (isScrolledIntoView('#' + idElement)) {
       if (chartsSueldos[idElement]) { continue }

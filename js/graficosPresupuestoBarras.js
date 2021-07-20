@@ -35,16 +35,18 @@ function generarchartbarra(etiquetas, data2, ctx) {
       }]
     },
     options: {
+      scales: {y:{ticks:{font:{family:'Raleway'}}},
+      x:{ticks:{font:{family:'Raleway'}}}},
+
       indexAxis: 'y',
       responsive: true,
       maintainAspectRatio: false,
       plugins: {
-
-        //cutoutPercentage: 40,
         title: {
           display: true,
           text: 'Gasto ejecutado por unidad',
           font: {
+            family: 'Titillium Web',
             size: 20,
           },
           padding: {
