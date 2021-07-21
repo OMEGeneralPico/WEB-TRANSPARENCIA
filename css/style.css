@@ -605,6 +605,9 @@ justify-content: center;
 
 
 
+.texto-info-mapa{
+  font-size: xx-large;font-weight: 600; width:100%; 
+}
 
 /*Mobile */
 @media only screen and (max-width: 500px) {
@@ -697,9 +700,13 @@ justify-content: center;
   }
 
   .ancho-mobile{
-    width: 95vh;
+    width: 90vh;
   }
 
+  
+  .texto-info-mapa{
+    font-size: xx-large;font-weight: 600; width:300px; 
+  }
 }
 
 /*tamaño intermedio */
