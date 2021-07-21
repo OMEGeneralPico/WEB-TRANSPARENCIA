@@ -43,6 +43,7 @@ function generarchartbarra(etiquetas, data2, ctx) {
       maintainAspectRatio: false,
       plugins: {
         title: {
+          align: 'start',
           display: true,
           text: 'Gasto ejecutado por unidad',
           font: {

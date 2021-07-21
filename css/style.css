@@ -447,20 +447,20 @@ justify-content: center;
   justify-content: center;
   text-align : justify;
 }
+
 .grid-mapa{
-  display:grid;
-  padding: 1em;
-  gap: 1em;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: auto;
-  width: 60%;
-  max-height: 80%;
-  font-family: 'Titillium Web', sans-serif;
+display: grid;
+grid-template-columns: 1fr 1fr;
+align-items: center;
+height:100%
+
 }
-.grid-mapa div{
- background-color: transparent;
- padding: 1em;
+.info{
+  font-size: 20px;
 }
+
+
+
  
 /* Color de fondo para cada slide*/
 .cd-fixed-background.img-1 {
@@ -524,7 +524,7 @@ justify-content: center;
   }
 
   .grid-item-a{
-    border-left: solid 3px black;
+    border-left: solid 5px black;
     padding: 1em;
     grid-row: 1/ span 2;
 }
@@ -541,6 +541,24 @@ justify-content: center;
   align-items: center;
 
 }
+
+.grid2 {
+  display: grid;
+  padding-top: 10em;
+  padding: 1em;
+  gap:1em;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 40% 60%;
+  height: 100%;
+  width: 60%;
+  align-items: center;
+  border-left: 5px solid black;
+  margin-left: 1em;
+}
+
+
+
+
 
 @media only screen and (max-width: 1150px) {
   .grid0{
@@ -571,6 +589,14 @@ justify-content: center;
   padding-left: 1em;
   align-items: center;
 }
+
+
+.grid2-uno3{
+  grid-column: 1/span 2;
+
+  align-items: start;
+}
+
 
   /*letra slides*/
   .cd-fixed-background p {
@@ -650,9 +676,6 @@ justify-content: center;
     grid-column: 1/4;
   }
 
-  .grid-mapa{
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  }
 
 
 
@@ -715,20 +738,9 @@ justify-content: center;
 }
 */
 
-.grid-mapa2 {
-  display: grid;
 
-  gap:1em;
-  grid-template-columns: 1fr;
- 
-  height: 100%;
-  width: 60%;
-  align-items: center;
-}
 
-.tam-map{
-  width: 30%;
-}
+
 
 mark {
   background-color: rgba(105, 190, 190, 1);
@@ -766,4 +778,8 @@ tr:nth-child(even) {
 
 .color-borde{
   border:solid 1px #000000;
+}
+
+.logo{
+  width: calc(100px + 20vw);
 }

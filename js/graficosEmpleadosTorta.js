@@ -37,8 +37,9 @@ function generarchartempleados(etiquetas, data2, ctx) {
         maintainAspectRatio: false,
         plugins: {
           title: {
+              align: 'start',
             display: true,
-            text: 'Sexo',
+            text: 'Empleados por sexo',
             font: {
               family: 'Titillium Web',
               size: 20,

@@ -39,6 +39,8 @@ function generarchart(etiquetas, data2, ctx) {
         title: {
           display: true,
           text: 'Gasto ejecutado por rubro',
+
+          align: 'start',
           font: {
             family: 'Titillium Web',
             size: 20,
