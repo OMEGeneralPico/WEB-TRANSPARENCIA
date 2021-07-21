@@ -69,7 +69,7 @@ $.getJSON("./json/PERSONAL.json", function (dataorig) {
 })
 
 function animarSueldos() {
-  for (var i = 0; i < Object.keys(presupuestos).length - 1; i++) {
+  for (var i = 0; i < Object.keys(sueldos).length - 1; i++) {
     var idElement = "Sueldos" + i;
     if (isScrolledIntoView('#' + idElement)) {
       if (chartsSueldos[idElement]) { continue }

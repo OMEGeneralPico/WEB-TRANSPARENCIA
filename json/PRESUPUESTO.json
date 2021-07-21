@@ -1,62 +1,62 @@
 {
    "CONCEJO DELIBERANTE": {
-      "BIENES DE CAPITAL": 2430408,
-      "BIENES DE CONSUMO": 3426496,
-      "GASTO EN PERSONAL": 44618790,
-      "SER. NO PERSONALES": 6419801
+      "Bienes de capital": 2430408,
+      "Bienes de consumo": 3426496,
+      "Gasto en personal": 44618790,
+      "Ser. no personales": 6419801
    },
    "INTENDENCIA": {
-      "BIENES DE CAPITAL": 9514055,
-      "BIENES DE CONSUMO": 1183866,
-      "GASTO EN PERSONAL": 54199376,
-      "SER. NO PERSONALES": 16897353
+      "Bienes de capital": 9514055,
+      "Bienes de consumo": 1183866,
+      "Gasto en personal": 54199376,
+      "Ser. no personales": 16897353
    },
    "GOBIERNO": {
-      "BIENES DE CAPITAL": 905440,
-      "BIENES DE CONSUMO": 4508348,
-      "GASTO EN PERSONAL": 135738188,
-      "SER. NO PERSONALES": 23110210,
-      "TRANSF. SOCIALES": 31903524
+      "Bienes de capital": 905440,
+      "Bienes de consumo": 4508348,
+      "Gasto en personal": 135738188,
+      "Ser. no personales": 23110210,
+      "Transf. sociales": 31903524
    },
    "PLANIFICACION": {
-      "BIENES DE CAPITAL": 3948821,
-      "BIENES DE CONSUMO": 2879396,
-      "GASTO EN PERSONAL": 37395414,
-      "PRESTAMOS": 18303,
-      "SER. NO PERSONALES": 9262536,
-      "TRABAJOS PUBLICOS": 78413102
+      "Bienes de capital": 3948821,
+      "Bienes de consumo": 2879396,
+      "Gasto en personal": 37395414,
+      "Prestamos": 18303,
+      "Ser. no personales": 9262536,
+      "Trabajos publicos": 78413102
    },
    "ESPACIOS PUBLICOS": {
-      "BIENES DE CAPITAL": 1368436,
-      "BIENES DE CONSUMO": 32795351,
-      "GASTO EN PERSONAL": 239678517,
-      "SER. NO PERSONALES": 65600793
+      "Bienes de capital": 1368436,
+      "Bienes de consumo": 32795351,
+      "Gasto en personal": 239678517,
+      "Ser. no personales": 65600793
    },
    "DESARROLLO SOCIAL": {
-      "BIENES DE CAPITAL": 637229,
-      "BIENES DE CONSUMO": 14517676,
-      "GASTO EN PERSONAL": 107775285,
-      "PRESTAMOS": 420000,
-      "SER. NO PERSONALES": 34465548,
-      "TRANSF. SOCIALES": 31715173
+      "Bienes de capital": 637229,
+      "Bienes de consumo": 14517676,
+      "Gasto en personal": 107775285,
+      "Prestamos": 420000,
+      "Ser. no personales": 34465548,
+      "Transf. sociales": 31715173
    },
    "ECONOMIA": {
-      "BIENES DE CAPITAL": 427994,
-      "BIENES DE CONSUMO": 3015224,
-      "GASTO EN PERSONAL": 82810126,
-      "PRESTAMOS": 8033716,
-      "SER. NO PERSONALES": 11183621,
-      "TRANSF. SOCIALES": 4497747
+      "Bienes de capital": 427994,
+      "Bienes de consumo": 3015224,
+      "Gasto en personal": 82810126,
+      "Prestamos": 8033716,
+      "Ser. no personales": 11183621,
+      "Transf. sociales": 4497747
    },
-   "ORGANIZMOS DESCENTRALIZADOS": {
-      "BIENES DE CAPITAL": 19791165,
-      "BIENES DE CONSUMO": 17681572,
-      "GASTO EN PERSONAL": 20125180,
-      "SER. NO PERSONALES": 13083800
+   "ORGANISMOS DESCENTRALIZADOS": {
+      "Bienes de capital": 19791165,
+      "Bienes de consumo": 17681572,
+      "Gasto en personal": 20125180,
+      "Ser. no personales": 13083800
    },
    "NO PROGRAMATICO": {
       "DEUDA PUBLICA": 39369048,
-      "PROGRAMAS ESPECIALES": 16956156,
-      "SER. NO PERSONALES": 162856645
+      "Programas especiales": 16956156,
+      "Ser. no personales": 162856645
    }
 }
