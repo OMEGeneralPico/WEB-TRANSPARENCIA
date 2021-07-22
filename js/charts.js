@@ -1,6 +1,3 @@
-
-
-
 function isScrolledIntoView(elem) {
 
 
@@ -20,6 +17,103 @@ function isScrolledIntoView(elem) {
 
 var chartsayudas = {}
 var inViewayudas = false;
+
+
+
+
+
+
+function animarAyuda() {
+    for (var i = 0; i < 1; i++) {
+        var idElement = "ayudaseconomicas";
+        if (isScrolledIntoView('#' + idElement)) {
+            if (chartsayudas[idElement]) { continue }
+            chartsayudas[idElement] = true;
+
+            var ctx = document.getElementById(idElement);
+
+            if (inViewayudas) { return; }
+            inViewayudas = true;
+            return myChart = new Chart(ctx, {
+
+
+                type: 'radar',
+                data: {
+
+                    labels: ['C. Deliberante', 'Intendencia', 'Gobierno', 'Planif. Urbana', 'Ambiente','Desarrollo Social', 'Economía', 'Org. Descentralizados', 'No programáticos'],
+                    datasets: [
+                        {
+                            tension: 0.1,
+                            fill: false,
+                            data: [129372564
+                                , 166292243
+                                , 403627853
+                                ,219516505
+                                ,712226604
+                                ,473682466
+                                ,222447884
+                                ,162186415
+                                ,108417844
+
+                            ],
+                            fill: true,
+                            backgroundColor: ['rgba(71, 123, 168, 0.5)', 'rgba(105, 190, 190, 0.5)', 'rgba(215, 90, 218, 0.5)'
+                            ],
+                            borderColor: [
+
+                                'rgba(71, 123, 168, 1)', 'rgba(105, 190, 190, 1)', 'rgba(215, 90, 218, 1)'
+                            ],
+
+                            borderWidth: 2
+                        }
+                    ]
+                },
+                options: {
+                    plugins: { deferred: { xOffset: 150 } },
+                    scales: {
+                        r: {
+                            ticks: {
+                                maxTicksLimit: 5,
+                                beginAtZero: true,
+                                min: 0,
+                                stepSize: 100000
+                            }
+                        }
+                    },
+                    legend: {
+                        display: false
+                    },
+                    plugins: { legend: true },
+                    responsive: true,
+                    maintainAspectRatio: false
+
+                }
+            });
+        } else {
+            inViewayudas = false;
+        }
+    }
+}
+
+$(window).scroll(function () {
+
+    animarAyuda();
+
+});
+
+$(window).load(function () {
+
+
+    animarAyuda();
+
+});
+
+
+
+var chartsayudas = {}
+var inViewayudas = false;
+
+
 
 
 
@@ -83,7 +177,7 @@ function animarAyuda() {
                             ],
                             backgroundColor: [
 
-                                'rgba(215, 90, 218, 1)'
+                                'rgba(35, 145, 200, 1)'
                             ],
                         },
                     ]
@@ -315,22 +409,23 @@ function animarGobierno() {
                     ]
                 },
                 options: {
-                    plugins:{
-                    legend: {
-                        display: true,
-                        position: 'right',
-                        align: 'middle',
-                        labels: {font:{ family: 'Raleway' }}
-                    },
-                    title: {
-                        display: true,
-                        text: 'Actividades área de Inspeccion',
-                        align: 'start',
-                        font: {
-                            family: 'Titillium Web',
-                            size: 20,
+                    plugins: {
+                        legend: {
+                            display: true,
+                            position: 'right',
+                            align: 'middle',
+                            labels: { font: { family: 'Raleway' } }
+                        },
+                        title: {
+                            display: true,
+                            text: 'Actividades área de Inspeccion',
+                            align: 'start',
+                            font: {
+                                family: 'Titillium Web',
+                                size: 20,
+                            }
                         }
-                    }},
+                    },
                     responsive: true,
                     maintainAspectRatio: false,
                     scales: {
@@ -373,5 +468,102 @@ $(window).load(function () {
 
 
     animarGobierno();
+
+});
+
+
+
+
+var chartsIntendencia = {}
+var InViewIntendencia = false;
+
+function animarIntendencia() {
+    for (var i = 0; i < 1; i++) {
+        var idElement = "legalesIntendencia";
+        if (isScrolledIntoView('#' + idElement)) {
+            if (chartsIntendencia[idElement]) { continue }
+            chartsIntendencia[idElement] = true;
+
+            var ctx = document.getElementById(idElement);
+
+            if (InViewIntendencia) { return; }
+            InViewIntendencia = true;
+
+
+            return new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Asesoria Legal', 'Resoluciones', 'Disposiciones', 'Proyectos de Ordenanzas', 'Ordenanzas Promulgadas'],
+                    datasets: [
+
+                        {
+                            data: [600, 2213, 28, 51, 49],
+                            backgroundColor: [
+                                'rgba(71, 123, 168, 1)',
+                                'rgba(105, 190, 190, 1)',
+                                'rgba(215, 90, 218, 1)',
+                                'rgba(153, 070, 135,1)',
+                                'rgba(240, 150, 145,1)',
+                                'rgba(35, 145, 200,1)',],
+                            borderWidth: 0
+                        },
+
+
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Actividades de Asesoría Legal',
+                            align: 'start',
+                            font: {
+                                family: 'Titillium Web',
+                                size: 20,
+                            },
+                            legend: {
+                                display: true,
+                                position: 'right',
+                                align: 'middle',
+                                labels: { font: { family: 'Raleway' } }
+                            }
+                        },
+
+                        legend: {
+                            display: true,
+                            position: 'right',
+                            align: 'middle',
+                            labels: { font: { family: 'Raleway' } },
+                        },
+
+                        scales: {
+                            xAxes: [{
+                                grid: {
+                                    display: false,
+                                },
+                            }]
+                        }
+                    }
+                }
+            });
+
+        } else {
+            InViewIntendencia = false;
+        }
+    }
+}
+
+$(window).scroll(function () {
+
+    animarIntendencia();
+
+});
+
+$(window).load(function () {
+
+
+    animarIntendencia();
 
 });
