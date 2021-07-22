@@ -8,7 +8,7 @@ $(document).ready(function () {
   $("#mapitadiv").load("img/mapa_pico.svg", function () {
     $("#mapita").click(function (evt) {
       $("#info").html(
-        "Recaudación por servicios <br><br>"+
+        "<b style='font-weight: 700;'>Recaudación por servicios </b><br><br>"+
         "Barrio: " +
           myjson[evt.target.id].nombre +
           "<br> Nivel de recaudación: " +
