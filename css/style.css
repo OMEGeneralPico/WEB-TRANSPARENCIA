@@ -207,6 +207,8 @@ text-align: right;
   .cd-fixed-background.img-7 {
     background-image: url("../img/fondo6.png");
   }
+
+
 }
 
 /*Efecto de transicion de imagenes (no borrar) */
@@ -269,6 +271,8 @@ text-align: right;
 @media only screen and (min-width: 1200px) {
   .cd-vertical-nav {
     display: block;
+  }
+
   }
 
 
@@ -530,6 +534,12 @@ height:100%
     grid-row: 1/ span 2;
 }
 
+.grid-item-a-individual{
+  border-left: solid 5px black;
+  padding: 1em;
+  grid-row: 1/ span 2;
+}
+
 .grid1 {
   display: grid;
   padding-top: 5em;
@@ -572,6 +582,16 @@ height:100%
   .grid-item-a{
       grid-column: 1/ span 2;  
   }
+
+  .grid-item{
+    width: 100%;
+    grid-column: 1/4;
+  }
+
+  .grid-item22{
+    width: 100%;
+    grid-column: 1/4;
+  }
   
 }
 
@@ -581,6 +601,14 @@ height:100%
   padding: 1em;
   background-color:rgba(114, 114, 114, 0.15);
   height: 300px;
+  width: 100%;
+}
+
+.grid-item22{
+  border-left: solid 5px black;
+  padding: 1em;
+  background-color:rgba(114, 114, 114, 0.15);
+  height: 400px;
   width: 100%;
 }
 
@@ -594,7 +622,6 @@ height:100%
 
 .grid2-uno3{
   grid-column: 1/span 2;
-
   align-items: start;
 }
 
@@ -659,6 +686,11 @@ height:100%
   }
 
   .grid-item{
+    width: 100%;
+    grid-column: 1/4;
+  }
+
+  .grid-item22{
     width: 100%;
     grid-column: 1/4;
   }
