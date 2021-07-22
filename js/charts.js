@@ -1,305 +1,265 @@
 
 
-/* Chart de ambiente */
-Chart.defaults.font.family = "Titillium Web"
-var ctx = document.getElementById('chartAmbiente').getContext('2d');
-var myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        
-        labels: ['CORPICO', 'LINEA', 'FEDEA', 'OTROS'],
-        datasets: [{
+
+function isScrolledIntoView(elem) {
+
+
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
   
-            data: [350000, 120000, 750000, 1000000],
-            backgroundColor: [
-                'rgba(71, 123, 168, 1)',
-                'rgba(105, 190, 190, 1)',
-                'rgba(35, 145, 200, 1)',
-                'rgba(153, 070, 135, 1)',
-                'rgba(190, 135, 180, 1)',
-                'rgba(215, 90, 218, 1)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 0)',
-                'rgba(54, 162, 235, 0)',
-                'rgba(255, 206, 86, 0)',
-                'rgba(75, 192, 192, 0)',
-                'rgba(153, 102, 255, 0)',
-                'rgba(255, 159, 64, 0)'
-            ],
-            borderWidth: 0
-        }]
-    },
-    options: {
-        plugins:{legend:false},
-        responsive: true,
-        maintainAspectRatio: false,
-        scales: {
-            x: {
-                grid: {
-                	display:false,
-                },
+    if ($(elem).offset()) {
+  
+      var elemTop = $(elem).offset().top;
+      var elemBottom = elemTop + $(elem).height();
+      return ((elemTop <= docViewBottom) && (elemBottom >= docViewTop));
+    } else {
+      return false
+    }
+  
+  }
+  
+  var chartsayudas = {}
+  var inViewayudas = false;
+  
+  
+  
+  
+  function animarAyuda() {
+    for (var i = 0; i < 1; i++) {
+      var idElement = "ayudaseconomicas";
+      if (isScrolledIntoView('#' + idElement)) {
+        if (chartsayudas[idElement]) { continue }
+        chartsayudas[idElement] = true;
+  
+        var ctx = document.getElementById(idElement);
+  
+        if (inViewayudas) { return; }
+        inViewayudas = true;
+        return myChart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+  
+            labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Junio'],
+            datasets: [
+              {
+                label: 'Alquiler',
+                tension: 0.2,
+                fill: false,
+  
+                data: [112000, 291600, 174600, 394700, 432000, 356500],
+                borderColor: [
+  
+                  'rgba(105, 190, 190, 1)'
+                ],
+                backgroundColor: [
+  
+                  'rgba(105, 190, 190, 1)'
+                ],
+              },
+              {
+                label: 'Enfermedad',
+                tension: 0.2,
+                fill: false,
+  
+                data: [26000, 43500, 42000, 65900, 57000, 82000],
+                borderColor: [
+  
+                  'rgba(71, 123, 168, 1)'
+                ],
+                backgroundColor: [
+  
+                  'rgba(71, 123, 168, 1)'
+                ],
+              },
+              {
+                label: 'Hogar',
+                tension: 0.2,
+                fill: false,
+  
+                data: [135500, 291900, 306653, 692650, 513000, 363700],
+                borderColor: [
+  
+                  'rgba(215, 90, 218, 1)'
+                ],
+                backgroundColor: [
+  
+                  'rgba(215, 90, 218, 1)'
+                ],
+              },
+            ]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+              x: {
                 ticks: {
-                	maxRotation: 0
-                }
+                  font:{family:'Raleway'}
+                },
+                stacked: true
+              },
+              y: {
+                ticks: {
+                  font:{family:'Raleway'},
+                  maxTicksLimit: 5,
+                },
+                stacked: true,
+                font: {
+                  family: 'Titillium Web'
+                },
+              }
             },
-            y: {
-            	ticks: {maxTicksLimit: 5}
-            
+            legend: {
+              display: true,
+              position: 'right',
+              align: 'middle',
+              labels: { font: { family: 'Raleway' } },
+            },
+            plugins: {
+              legend:{
+                labels:{
+                  font:{
+                    family: 'Raleway'
+                  }
+                }
+              },
+              title: {
+                display: true,
+                text: 'Subsidios a personas por concepto',
+                align: 'start',
+                font: {
+                  family: 'Titillium Web',
+                  size: 20,
+                },
+              }
             }
+          }
+        });
+  
+      } else {
+        inViewayudas = false;
+      }
+    }
+  }
+  
+  $(window).scroll(function () {
+  
+    animarAyuda();
+  
+  });
+  
+  $(window).load(function () {
+  
+  
+    animarAyuda();
+  
+  });
+
+  
+
+
+
+
+
+var chartsAmbiente = {}
+var InViewAmbiente = false;
+
+
+
+
+function animarAmbiente() {
+    for (var i = 0; i < 1; i++) {
+        var idElement = "materialesAmbiente";
+        if (isScrolledIntoView('#' + idElement)) {
+            if (chartsAmbiente[idElement]) { continue }
+            chartsAmbiente[idElement] = true;
+
+            var ctx = document.getElementById(idElement);
+
+            if (InViewAmbiente) { return; }
+            InViewAmbiente = true;
+
+            return new Chart(ctx, {
+                type: 'bar',
+                data: {
+
+                    labels: ['Carton y Papeles', 'Plastico', 'Vidrio', 'Metales', 'Chatarra'],
+                    datasets: [
+                        {
+                            data: [36800, 22060, 83785, 1850, 32680],
+                            borderColor: [
+
+                                'rgba(105, 190, 190, 1)',
+                                'rgba(71, 123, 168, 1)',
+                                'rgba(215, 90, 218, 1)',
+                                'rgba(240, 150, 145, 1)',
+                                'rgba(35, 145, 200, 1)',
+                            ],
+                            backgroundColor: [
+
+                                'rgba(105, 190, 190, 1)',
+                                'rgba(71, 123, 168, 1)',
+                                'rgba(215, 90, 218, 1)',
+                                'rgba(240, 150, 145, 1)',
+                                'rgba(35, 145, 200, 1)',
+
+                            ],
+                        },
+
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: {
+                            font: {
+                                family: 'Raleway',
+                            },
+                        },
+                        y: {
+                            ticks: {
+                                maxTicksLimit: 5,
+                            },
+
+                            font: {
+                                family: 'Raleway'
+                            },
+                        }
+                    },
+                    legend: {
+                        display: false
+                    },
+                    plugins: {
+                        legend: false,
+                        title: {
+                            display: true,
+                            text: 'Material Recuperado',
+                            align: 'start',
+                            font: {
+                                family: 'Titillium Web',
+                                size: 20,
+                            },
+                        }
+                    }
+                }
+            });
+
+        } else {
+            InViewAmbiente = false;
         }
     }
+}
+
+$(window).scroll(function () {
+
+    animarAmbiente();
+
 });
 
-/* chart de desarrollo */
-Chart.defaults.font.family = "Titillium Web"
-var ctx = document.getElementById('chartDesarrolloSocial').getContext('2d');
-var myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ['CORPICO', 'LINEA', 'FEDEA', 'OTROS'],
-        datasets: [{
-            label: 'Cantidad de empleados',
-            data: [16, 34, 36, 7, 48, 2,12,18],
-            backgroundColor: [
-                'rgba(71, 123, 168, 1)',
-                'rgba(105, 190, 190, 1)',
-                'rgba(35, 145, 200, 1)',
-                'rgba(153, 070, 135, 1)',
-                'rgba(190, 135, 180, 1)',
-                'rgba(215, 90, 218, 1)',
-                'rgba(240, 150, 145, 1)', 
-                'rgba(55, 55, 55, 1)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 0)',
-                'rgba(54, 162, 235, 0)',
-                'rgba(255, 206, 86, 0)',
-                'rgba(75, 192, 192, 0)',
-                'rgba(153, 102, 255, 0)',
-                'rgba(255, 159, 64, 0)'
-            ],
-            borderWidth: 0
-        }]
-    },
-    options: {
-        responsive: false,
-        
-        scales: {
-            x: {
-                grid: {
-                    display:false,
-                },
-                ticks: {
-                    maxRotation: 0
-                }
-            },
-            y: {
-                ticks: {maxTicksLimit: 5}
-            
-            }
-        }
-    }
+$(window).load(function () {
+
+
+    animarAmbiente();
+
 });
-
-/* Chart economia */
-Chart.defaults.font.family = "Titillium Web"
-var ctx = document.getElementById('chartEconomia').getContext('2d');
-var myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ['SECRETARIA DE ECONOMÍA', 'CONTADURIA GENERAL', 'RENTAS', 'HAB. Y CONTROL COMERCIAL', 'DES. ECONOM. Y PRODUCT.', 'TESORERIA'],
-        datasets: [{
-            label: 'Cantidad de empleados',
-            data: [5, 20, 29, 25, 9, 14],
-            backgroundColor: [
-                'rgba(71, 123, 168, 1)',
-                'rgba(105, 190, 190, 1)',
-                'rgba(35, 145, 200, 1)',
-                'rgba(153, 070, 135, 1)',
-                'rgba(190, 135, 180, 1)',
-                'rgba(215, 90, 218, 1)',
-                'rgba(240, 150, 145, 1)', 
-                'rgba(55, 55, 55, 1)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 0)',
-                'rgba(54, 162, 235, 0)',
-                'rgba(255, 206, 86, 0)',
-                'rgba(75, 192, 192, 0)',
-                'rgba(153, 102, 255, 0)',
-                'rgba(255, 159, 64, 0)'
-            ],
-            borderWidth: 0
-        }]
-    },
-    options: {
-        scales: {
-            x: {
-                grid: {
-                    display:false,
-                },
-                ticks: {
-                    maxRotation: 0
-                }
-            },
-            y: {
-                ticks: {maxTicksLimit: 5}
-            
-            }
-        }
-    }
-});
-
-/* chart gobierno */
-Chart.defaults.font.family = "Titillium Web"
-var ctx = document.getElementById('chartGobierno').getContext('2d');
-var myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ['GOBIERNO SEG. EDUC. Y CULTURA', 'RECURSOS HUMANOS', 'PREVENC. Y CONV. CIUDADANA', 'EDUCAC. Y CULTURA', 'RELACIONES INSTITUCIONALES', 'TURISMO','CHOFERES'],
-        datasets: [{
-            label: 'Cantidad de empleados',
-            data: [12, 29, 77, 40, 18, 5,17],
-            backgroundColor: [
-                'rgba(71, 123, 168, 1)',
-                'rgba(105, 190, 190, 1)',
-                'rgba(35, 145, 200, 1)',
-                'rgba(153, 070, 135, 1)',
-                'rgba(190, 135, 180, 1)',
-                'rgba(215, 90, 218, 1)',
-                'rgba(240, 150, 145, 1)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 0)',
-                'rgba(54, 162, 235, 0)',
-                'rgba(255, 206, 86, 0)',
-                'rgba(75, 192, 192, 0)',
-                'rgba(153, 102, 255, 0)',
-                'rgba(255, 159, 64, 0)'
-            ],
-            borderWidth: 0
-        }]
-    },
-    options: {
-        scales: {
-            x: {
-                grid: {
-                    display:false,
-                },
-                ticks: {
-                    maxRotation: 0
-                }
-            },
-            y: {
-                ticks: {maxTicksLimit: 5}
-            
-            }
-        }
-    }
-});
-
-/* chart intendencia */
-Chart.defaults.font.family = "Titillium Web"
-var ctx = document.getElementById('chartIntendencia').getContext('2d');
-var myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ['INTENDENCIA', 'JUZGADO DE FALTAS', 'ASUNTOS LEGALES', 'COMUNICACIONES', 'TECNOLOGIA DE LA INFORMACION', 'CEREMONIAL Y PROTOC. INSTITU.','GESTION Y ADM DE ARTICULACIÓN'],
-        datasets: [{
-            label: 'Cantidad de empleados',
-            data: [4, 13, 10, 2, 11, 4,1],
-            backgroundColor: [
-                'rgba(71, 123, 168, 1)',
-                'rgba(105, 190, 190, 1)',
-                'rgba(35, 145, 200, 1)',
-                'rgba(153, 070, 135, 1)',
-                'rgba(190, 135, 180, 1)',
-                'rgba(215, 90, 218, 1)',
-                'rgba(240, 150, 145, 1)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 0)',
-                'rgba(54, 162, 235, 0)',
-                'rgba(255, 206, 86, 0)',
-                'rgba(75, 192, 192, 0)',
-                'rgba(153, 102, 255, 0)',
-                'rgba(255, 159, 64, 0)'
-            ],
-            borderWidth: 0
-        }]
-    },
-    options: {
-        scales: {
-            x: {
-                grid: {
-                    display:false,
-                },
-                ticks: {
-                    maxRotation: 0
-                }
-            },
-            y: {
-                ticks: {maxTicksLimit: 5}
-            
-            }
-        }
-    }
-});
-
-/* chart planificacion */
-Chart.defaults.font.family = "Titillium Web"
-var ctx = document.getElementById('chartPlanificacionUrbana').getContext('2d');
-var myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ['PLANIF. Y GESTION URBANA', 'ENTE REGULADOR DE SERVICIOS', 'INFRAEST. Y OBRAS MUNICIPALES', 'OBRAS PARTICULARES', 'PLANEAM. Y CATASTRO', 'DISEÑO Y PLANIFIC.'],
-        datasets: [{
-            label: 'Cantidad de empleados',
-            data: [2, 2, 15, 18, 3, 3],
-            backgroundColor: [
-                'rgba(71, 123, 168, 1)',
-                'rgba(105, 190, 190, 1)',
-                'rgba(35, 145, 200, 1)',
-                'rgba(153, 070, 135, 1)',
-                'rgba(190, 135, 180, 1)',
-                'rgba(215, 90, 218, 1)',
-                'rgba(240, 150, 145, 1)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 0)',
-                'rgba(54, 162, 235, 0)',
-                'rgba(255, 206, 86, 0)',
-                'rgba(75, 192, 192, 0)',
-                'rgba(153, 102, 255, 0)',
-                'rgba(255, 159, 64, 0)'
-            ],
-            borderWidth: 0
-        }]
-    },
-    options: {
-        scales: {
-            x: {
-                grid: {
-                    display:false,
-                },
-                ticks: {
-                    maxRotation: 0
-                }
-            },
-            y: {
-                ticks: {maxTicksLimit: 5}
-            
-            }
-        }
-    }
-});
-
-
-
-
-
-
-
-
-/* Chart de ambiente */
