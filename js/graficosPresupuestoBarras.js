@@ -45,7 +45,7 @@ function generarchartbarra(etiquetas, data2, ctx) {
         title: {
           align: 'start',
           display: true,
-          text: 'Gasto ejecutado por unidad',
+          text: 'Gasto ejecutado por unidad ($)',
           font: {
             family: 'Titillium Web',
             size: 20,

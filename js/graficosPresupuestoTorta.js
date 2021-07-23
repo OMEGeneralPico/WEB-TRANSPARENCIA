@@ -38,7 +38,7 @@ function generarchart(etiquetas, data2, ctx) {
       plugins: {
         title: {
           display: true,
-          text: 'Gasto ejecutado por rubro',
+          text: 'Gasto ejecutado por rubro ($)',
 
           align: 'start',
           font: {

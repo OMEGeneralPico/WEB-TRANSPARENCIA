@@ -456,12 +456,17 @@ justify-content: center;
 display: grid;
 grid-template-columns: 1fr 1fr;
 align-items: center;
-height:100%
+max-width: 500px;
+height: 100%;
+
+
+
 
 }
 .info{
   font-size: 20px;
   color: #000000;
+  text-align: left;
 }
 
 
@@ -511,7 +516,7 @@ height:100%
   padding: 1em;
 
 
-    width: calc(400px + 10vw) ;
+    width: calc(550px + 10vw) ;
     text-align: justify;
   
 }
@@ -534,11 +539,7 @@ height:100%
     grid-row: 1/ span 2;
 }
 
-.grid-item-a-individual{
-  border-left: solid 5px black;
-  padding: 1em;
-  grid-row: 1/ span 2;
-}
+
 
 .grid1 {
   display: grid;
@@ -547,6 +548,7 @@ height:100%
   gap:1em;
   grid-template-columns: 50% 50%;
   grid-template-rows: 40% 60%;
+
   height: 100%;
   width: 60%;
   align-items: center;
@@ -555,9 +557,10 @@ height:100%
 
 .grid2 {
   display: grid;
-  padding-top: 10em;
+  padding-top: 5em;
   padding: 1em;
-  gap:1em;
+
+gap: 1em;
   grid-template-columns: 50% 50%;
   grid-template-rows: 40% 60%;
   height: 100%;
@@ -604,13 +607,8 @@ height:100%
   width: 100%;
 }
 
-.grid-item22{
-  border-left: solid 5px black;
-  padding: 1em;
-  background-color:rgba(114, 114, 114, 0.15);
-  height: 400px;
-  width: 100%;
-}
+
+
 
 .uno3{
   grid-column: 1/span 2;
@@ -788,15 +786,25 @@ table {
 
 }
 
+.tablepresupuesto {
+  font-family: raleway;
+  border-collapse: collapse;
+  width: 90%;
+  border-right: 2px solid black;
+
+}
+
 td, th {
 
-  text-align: left;
+  text-align: center;
   padding: 8px;
 }
-tr:nth-child(even) {
-  background-color: #dddddd;
+tr:nth-child(odd) {
+  background-color:rgba(114, 114, 114, 0.15);
 }
-
+th{
+  font-weight: 600;
+}
 
 .grilla{
   display:grid;
