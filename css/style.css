@@ -332,7 +332,7 @@ text-align: right;
 
 }
 
-.logo{
+.logo_muni{
   opacity: 0;
   animation: mainFadeIn 1.5s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
   animation-delay: 2s;
@@ -888,13 +888,13 @@ a.button8{
 
   }
 
-  .logo_muni {
+  .logo_muni2 {
     visibility: hidden;
   }
   
-  .fadeIn {
-    -webkit-animation: animat_show 0.8s;
-    animation: animat_show 0.8s;
+  .fadeInLogo {
+    -webkit-animation: animat_show 1.5s;
+    animation: animat_show 3s;
     visibility: visible !important;
   }
   
