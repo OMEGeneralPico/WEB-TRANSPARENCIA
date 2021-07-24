@@ -321,9 +321,7 @@ text-align: right;
 }
 .logo_muni{
   align-content: center;
-  opacity: 0;
-  animation: mainFadeIn 1.5s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
-  animation-delay: 2s;
+
 
   position:relative;
   top: 50%;
@@ -889,3 +887,24 @@ a.button8{
     bottom: 10%;
 
   }
+
+  .logo_muni {
+    visibility: hidden;
+  }
+  
+  .fadeIn {
+    -webkit-animation: animat_show 0.8s;
+    animation: animat_show 0.8s;
+    visibility: visible !important;
+  }
+  
+  @-webkit-keyframes animat_show {
+    0% {
+      opacity: 0
+    }
+  
+    100% {
+      opacity: 1
+    }
+  }
+  
