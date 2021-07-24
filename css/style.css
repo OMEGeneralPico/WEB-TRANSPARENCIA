@@ -50,8 +50,10 @@ Main Components
   background-color: #000000;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   z-index: 1;
+  
 }
 .cd-header .h1 {
+
   width: 90%;
   font-family: 'Titillium Web', sans-serif;
   font-weight: bolder;
@@ -63,6 +65,7 @@ text-align: right;
   position: absolute;
   left: 40%;
 
+
   top: 50%;
   bottom: auto;
   right: auto;
@@ -72,12 +75,17 @@ text-align: right;
   -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
 
+
+
+
 }
 .cd-header .h1 h1,
 .cd-header .h1 .h1_generalpico {
   opacity: 0;
   animation: mainFadeIn 0.8s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
   animation-delay: 1s;
+  border-right: 5px solid white;
+  padding-right: 0.5em;
   
 }
 .cd-header .h1 .title .block {
@@ -86,7 +94,7 @@ text-align: right;
   background: rgba(105, 190, 190, 1);
   position: absolute;
   animation: mainBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
-  display: flex;
+
   z-index: 1;
 }
 
@@ -297,19 +305,42 @@ text-align: right;
 
 /* Franja de color negro para la slide del video */
 .cajitatrans {
+
+
     position: absolute;
-    top: 40%;
+    top: 30%;
     background: rgba(0, 0, 0, 0.7);
     color: #f1f1f1;
-    padding: 7%;
-    white-space: nowrap;
-    display: flex;
-    justify-content: flex-end;
-    margin: auto;
+    padding: 3%;
+
+
+
     left: 0%;
     right: 0%;
     
 }
+.logo_muni{
+  align-content: center;
+  opacity: 0;
+  animation: mainFadeIn 1.5s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+  animation-delay: 2s;
+
+  position:relative;
+  top: 50%;
+
+
+  left: 86%;
+
+
+}
+
+.logo{
+  opacity: 0;
+  animation: mainFadeIn 1.5s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+  animation-delay: 2s;
+}
+
+
 
 
 
@@ -727,6 +758,7 @@ gap: 1em;
     opacity: 0;
     animation: mainFadeIn 0.8s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
     animation-delay: 1s;
+    
 
   }
 
@@ -746,7 +778,7 @@ gap: 1em;
     width: 95%;
   }
 
-  .contenedor-texto-IntroCierre{
+  .contene%;dor-texto-IntroCierre{
     width: 90%;text-align: justify;
   }
 
@@ -790,14 +822,17 @@ table {
   font-family: raleway;
   border-collapse: collapse;
   width: 90%;
+  height: 90%;
   border-right: 2px solid black;
+  font-size: calc(7px + 0.7vw);
 
 }
 
 td, th {
 
   text-align: center;
-  padding: 8px;
+  padding: calc(2px 10vw);
+  font-size: calc(7px + 0.7vw);
 }
 tr:nth-child(odd) {
   background-color:rgba(114, 114, 114, 0.15);
@@ -819,10 +854,6 @@ th{
 
 .color-borde{
   border:solid 1px #000000;
-}
-
-.logo{
-  width: calc(100px + 20vw);
 }
 
 a.button8{
@@ -850,4 +881,11 @@ a.button8{
   display:block;
   margin:0.2em auto;
   }
+  }
+
+  .mail{
+    position: absolute;
+    left: 90%;
+    bottom: 10%;
+
   }
