@@ -708,6 +708,40 @@ gap: 1em;
 
 }
 
+.esconder{
+  font-size:0;
+
+
+}
+.esconderbr{
+  display: none;
+}
+
+@media only screen and (max-width: 1150px) {
+  .esconder{
+    font-size: calc(30px + 0.8vw);
+    font-weight: 700;
+    line-height: 1.8;
+    font-family: 'Titillium Web', sans-serif !important;
+    color: #000000 !important;
+    text-align: end;
+    background-color:rgba(114, 114, 114, 0.15);
+
+    border-right:solid 5px black;
+
+   width: 90%;
+
+
+
+   padding-right: 1em;
+
+
+  }
+  .esconderbr{
+    display:inline;
+  }
+}
+
 
 .img-intendenta{
   width: calc(140px + 5vw);
