@@ -323,7 +323,6 @@ text-align: right;
 .logo_muni{
   align-content: center;
 
-
   position:relative;
   top: 50%;
 
@@ -548,6 +547,7 @@ height: 100%;
 
     width: calc(550px + 10vw) ;
     text-align: justify;
+    max-width: 90%;
   
 }
 
@@ -926,6 +926,12 @@ a.button8{
   }
   }
 
+
+
+  .logo_muni2 {
+    visibility: hidden;
+  }
+  
   .mail{
     position: absolute;
     left: 90%;
@@ -933,13 +939,17 @@ a.button8{
 
   }
 
-  .logo_muni2 {
-    visibility: hidden;
-  }
-  
 
-  @media only screen and (max-width: 500px) {
-    .logo_muni2{visibility: visible;}
+  @media only screen and (max-width: 700px) {
+    .logo_muni2{
+      visibility: visible;}
+   
+      .mail{
+      position: absolute;
+      left: 80%;
+      bottom: 5%;
+  
+    }
   }
   .fadeInLogo {
     -webkit-animation: animat_show 1.5s;
@@ -957,11 +967,8 @@ a.button8{
     }
   }
   
-
-  @media (min-width:576px){
-    .navbar-expand-sm{flex-wrap:nowrap;justify-content:flex-start}
-    .navbar-expand-sm .navbar-nav{flex-direction:row}
-    .navbar-expand-sm .navbar-nav .dropdown-menu{position:absolute}
-    .navbar-expand-sm .navbar-nav .nav-link{padding-right:.5rem;padding-left:.5rem}
-    .navbar-expand-sm .navbar-nav-scroll{overflow:visible}
-    .navbar-expand-sm .navbar-collapse{display:flex!important;flex-basis:auto}.navbar-expand-sm .navbar-toggler{display:none}}
+.titulo-IntroCierre{
+  text-align: start;
+  width: calc(550px + 10vw);
+  max-width: 90%;
+}
