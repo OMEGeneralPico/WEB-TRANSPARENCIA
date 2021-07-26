@@ -84,7 +84,7 @@ text-align: right;
   opacity: 0;
   animation: mainFadeIn 0.8s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
   animation-delay: 1s;
-  border-right: 5px solid white;
+  border-right: calc(1px + 0.2vw) solid white;
   padding-right: 0.5em;
   
 }
@@ -727,6 +727,7 @@ gap: 1em;
 
 /*Mobile */
 @media only screen and (max-width: 500px) {
+
   body{
     position: relative;
   }
@@ -935,6 +936,10 @@ a.button8{
     visibility: hidden;
   }
   
+
+  @media only screen and (max-width: 500px) {
+    .logo_muni2{visibility: visible;}
+  }
   .fadeInLogo {
     -webkit-animation: animat_show 1.5s;
     animation: animat_show 3s;
@@ -951,3 +956,11 @@ a.button8{
     }
   }
   
+
+  @media (min-width:576px){
+    .navbar-expand-sm{flex-wrap:nowrap;justify-content:flex-start}
+    .navbar-expand-sm .navbar-nav{flex-direction:row}
+    .navbar-expand-sm .navbar-nav .dropdown-menu{position:absolute}
+    .navbar-expand-sm .navbar-nav .nav-link{padding-right:.5rem;padding-left:.5rem}
+    .navbar-expand-sm .navbar-nav-scroll{overflow:visible}
+    .navbar-expand-sm .navbar-collapse{display:flex!important;flex-basis:auto}.navbar-expand-sm .navbar-toggler{display:none}}
