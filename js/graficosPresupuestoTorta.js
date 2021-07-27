@@ -54,7 +54,7 @@ function generarchart(etiquetas, data2, ctx) {
           display: true,
           position: 'right',
           align: 'middle',
-          labels: {font:{ family: 'Raleway' }}
+          labels: { font: { family: 'Raleway' } }
         }
       }
     }

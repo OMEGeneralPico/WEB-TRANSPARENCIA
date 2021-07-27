@@ -15,98 +15,354 @@ function isScrolledIntoView(elem) {
 
 }
 
-var chartsayudas = {}
-var inViewayudas = false;
 
+var chartpresupuestosecre = {}
+var inViewpresupuestosecre = false;
 
-
-
-
-
-function animarAyuda() {
+function animarpresupuestosecre() {
     for (var i = 0; i < 1; i++) {
-        var idElement = "ayudaseconomicas";
+        var idElement = "presupuestosecre";
         if (isScrolledIntoView('#' + idElement)) {
-            if (chartsayudas[idElement]) { continue }
-            chartsayudas[idElement] = true;
+            if (chartpresupuestosecre[idElement]) { continue }
+            chartpresupuestosecre[idElement] = true;
 
             var ctx = document.getElementById(idElement);
 
-            if (inViewayudas) { return; }
-            inViewayudas = true;
-            return myChart = new Chart(ctx, {
-
-
-                type: 'radar',
+            if (inViewpresupuestosecre) { return; }
+            inViewpresupuestosecre = true;
+            return new Chart(ctx, {
+                type: 'pie',
                 data: {
 
-                    labels: ['C. Deliberante', 'Intendencia', 'Gobierno', 'Planif. Urbana', 'Ambiente','Desarrollo Social', 'Economía', 'Org. Descentralizados', 'No programáticos'],
+                    labels: ['C.Deliberante', 'Intendencia', 'Gobierno', 'Planif. Urbana', 'Ambiente', 'Desarrollo Social', 'Economia', 'Org. Descentralizados', 'No programaticos'],
                     datasets: [
                         {
                             tension: 0.1,
                             fill: false,
-                            data: [129372564
-                                , 166292243
-                                , 403627853
-                                ,219516505
-                                ,712226604
-                                ,473682466
-                                ,222447884
-                                ,162186415
-                                ,108417844
-
-                            ],
+                            data: [4.08, 5.86, 14.05, 9.47, 24.27, 13.58, 7.88, 5.07, 15.74],
                             fill: true,
-                            backgroundColor: ['rgba(71, 123, 168, 0.5)', 'rgba(105, 190, 190, 0.5)', 'rgba(215, 90, 218, 0.5)'
+                            backgroundColor: ['rgba(71, 123, 168, 1)', 'rgba(105, 190, 190, 1)', 'rgba(215, 90, 218, 0.5)',
+
+
+
+                                'rgba(240, 150, 145, 1)',
+                                'rgba(35, 145, 200, 1)',
                             ],
+
+
+                            borderWidth: 4,
                             borderColor: [
 
-                                'rgba(71, 123, 168, 1)', 'rgba(105, 190, 190, 1)', 'rgba(215, 90, 218, 1)'
+                                'rgba(114, 114, 114, 0)'
                             ],
 
-                            borderWidth: 2
                         }
                     ]
                 },
                 options: {
-                    plugins: { deferred: { xOffset: 150 } },
-                    scales: {
-                        r: {
-                            ticks: {
-                                maxTicksLimit: 5,
-                                beginAtZero: true,
-                                min: 0,
-                                stepSize: 100000
-                            }
-                        }
-                    },
-                    legend: {
-                        display: false
-                    },
-                    plugins: { legend: true },
                     responsive: true,
-                    maintainAspectRatio: false
+                    maintainAspectRatio: false,
+                    plugins: {
+
+                        title: {
+                            display: true,
+                            text: 'Presupuesto ejecutado 2021 (%)',
+                            align: 'center',
+                            font: {
+                                family: 'Titillium Web',
+                                size: 20,
+                            }
+                        },
+                        legend: {
+                            display: true,
+                            position: 'right',
+                            align: 'middle',
+                            labels: { font: { family: 'Raleway' } }
+                        },
+                    },
+
+
 
                 }
             });
         } else {
-            inViewayudas = false;
+            inViewpresupuestosecre = false;
         }
     }
 }
-
 $(window).scroll(function () {
 
-    animarAyuda();
+    animarpresupuestosecre();
 
 });
 
 $(window).load(function () {
 
 
-    animarAyuda();
+    animarpresupuestosecre();
 
 });
+
+
+var chartrecursossecre = {}
+var inViewrecursossecre = false;
+
+function animarrecursossecre() {
+    for (var i = 0; i < 1; i++) {
+        var idElement = "recursossecre";
+        if (isScrolledIntoView('#' + idElement)) {
+            if (chartrecursossecre[idElement]) { continue }
+            chartrecursossecre[idElement] = true;
+
+            var ctx = document.getElementById(idElement);
+
+            if (inViewrecursossecre) { return; }
+            inViewrecursossecre = true;
+            return new Chart(ctx, {
+                type: 'bar',
+                data: {
+
+                    /*labels: ['Jurisd. Comunal', 'Otras Jurisd.', 'Ant. Coparticipación', 'Rec. de capital', 'Aportes no reint.'],*/
+                    labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Junio'],
+                    datasets: [
+                        {
+                            label: 'Jurisd. Comunal',
+                            tension: 0.2,
+                            fill: false,
+                
+                            data: [68.83, 81.19, 137.19, 112.42, 86.81, 103.21],
+   
+                            backgroundColor: [
+                
+                                'rgba(105, 190, 190, 1)'
+                            ],
+      
+                        },
+                        {
+                            label: 'Reg. de coparticipación',
+                            tension: 0.2,
+                            fill: false,
+                
+                            data: [78.79, 91.28, 120.23, 99.98, 120.19, 97.55],
+
+                            backgroundColor: [
+                
+                                'rgba(71, 123, 168, 1)'
+                            ],
+
+                            
+                        },
+                        {
+                            label: 'Ant. Coparticipación',
+                            tension: 0.2,
+                            fill: false,
+                
+                            data: [0, 0, 10.93, 0, 0, 0],
+
+                            backgroundColor: [
+                
+                                'rgba(35, 145, 200, 1)'
+                            ],
+
+                        },
+                        {
+                            label: 'Rec. de capital',
+                            tension: 0.2,
+                            fill: false,
+                
+                            data: [1.33, 1.25, 2.23, 1.61, 1.07, 1.39],
+
+                            backgroundColor: [
+                
+                                'rgba(35, 145, 200, 1)'
+                            ],
+
+                        },
+                        {
+                            label: 'Aportes no reint.',
+                            tension: 0.2,
+                            fill: false,
+                
+                            data: [15.35, 8.70, 0, 4.45, 20.26, 23.6],
+
+                            backgroundColor: [
+                
+                                'rgba(35, 145, 200, 1)'
+                            ],
+
+                        }
+
+                        
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    scales: {
+                        x: {
+                            ticks: {
+                                font: { family: 'Raleway' }
+                            },
+                            stacked: true
+                        },
+                        y: {
+                            ticks: {
+                                font: { family: 'Raleway' },
+                                maxTicksLimit: 5,
+                            },
+                            stacked: true,
+                            font: {
+                                family: 'Titillium Web'
+                            },
+                        }
+                    },
+                    legend: {
+                        display: true,
+                        position: 'right',
+                        align: 'middle',
+                        labels: { font: { family: 'Raleway' } },
+                    },
+                    plugins: {
+                        legend: {
+                            labels: {
+                                font: {
+                                    family: 'Raleway'
+                                }
+                            }
+                        },
+                        title: {
+                            display: true,
+                            text: 'Recursos asignados 2021 (en millones $)',
+                            align: 'center',
+                            font: {
+                                family: 'Titillium Web',
+                                size: 20,
+                            },
+                        }
+                    }
+                }
+            });
+        } else {
+            inViewrecursossecre = false;
+        }
+    }
+}
+$(window).scroll(function () {
+
+    animarrecursossecre();
+
+});
+
+$(window).load(function () {
+
+
+    animarrecursossecre();
+
+});
+
+
+var chartpersonalsecre = {}
+var inViewppersonalsecre = false;
+
+function animarpersonalsecre() {
+    for (var i = 0; i < 1; i++) {
+        var idElement = "personalsecre";
+        if (isScrolledIntoView('#' + idElement)) {
+            if (chartpersonalsecre[idElement]) { continue }
+            chartpersonalsecre[idElement] = true;
+
+            var ctx = document.getElementById(idElement);
+
+            if (inViewppersonalsecre) { return; }
+            inViewppersonalsecre = true;
+            return new Chart(ctx, {
+                type: 'bar',
+                data: {
+
+                    labels: ['C.Deliberante', 'Intendencia', 'Gobierno', 'Planif. Urbana', 'Ambiente', 'Desarrollo Social', 'Economia', 'Org. Descentralizados'],
+                    datasets: [
+                        {
+                            tension: 0.1,
+                            fill: false,
+                            data: [32, 35, 189, 37, 283, 165, 93, 22],
+                            fill: true,
+                            backgroundColor: ['rgba(71, 123, 168, 1)', 'rgba(105, 190, 190, 1)', 'rgba(215, 90, 218, 0.5)',
+
+
+
+                                'rgba(240, 150, 145, 1)',
+                                'rgba(35, 145, 200, 1)',
+                            ],
+
+
+                            borderWidth: 4,
+                            borderColor: [
+
+                                'rgba(234,238,226,0)'
+                            ],
+
+                        }
+                    ]
+                },
+                options: {
+                    scales: {y:{ticks:{font:{family:'Raleway'}}},
+                    x:{ticks:{font:{family:'Raleway'}}}},
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+
+                        title: {
+                            display: true,
+                            text: 'Empleados por secretaría',
+                            align: 'center',
+                            font: {
+                                family: 'Titillium Web',
+                                size: 20,
+                            }
+                        },
+                        legend: {
+                            display: false,
+                            position: 'right',
+                            align: 'middle',
+                            labels: { font: { family: 'Raleway' } }
+                        },
+                    },
+
+
+
+                }
+            });
+        } else {
+            inViewppersonalsecre = false;
+        }
+    }
+}
+$(window).scroll(function () {
+
+    animarpersonalsecre();
+
+});
+
+$(window).load(function () {
+
+
+    animarpersonalsecre();
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -565,5 +821,276 @@ $(window).load(function () {
 
 
     animarIntendencia();
+
+});
+
+var chartscordones = {}
+var inViewcordones = false;
+
+function animarcordones() {
+  for (var i = 0; i < 1; i++) {
+    var idElement = "cordones";
+    if (isScrolledIntoView('#' + idElement)) {
+      if (chartscordones[idElement]) { continue }
+      chartscordones[idElement] = true;
+
+      var ctx = document.getElementById(idElement);
+
+      if (inViewcordones) { return; }
+      inViewcordones = true;
+      return new Chart(ctx, {
+        type: 'bar',
+        data: {
+
+          labels: ['Norte', 'Ranqueles/E.&Prog.', 'Universitario','Federal Bicentenario'],
+          datasets: [
+            {
+              data: [2339.5, 2560, 806,821.5],
+              borderColor: [
+
+                'rgba(105, 190, 190, 1)',
+                'rgba(71, 123, 168, 1)',
+                'rgba(215, 90, 218, 1)',
+                'rgba(240, 150, 145, 1)',
+                'rgba(35, 145, 200, 1)',
+              ],
+              backgroundColor: [
+
+                'rgba(105, 190, 190, 1)',
+                'rgba(71, 123, 168, 1)',
+                'rgba(215, 90, 218, 1)',
+                'rgba(240, 150, 145, 1)',
+                'rgba(35, 145, 200, 1)',
+
+              ],
+            },
+
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            x: {
+              font: {
+                family: 'Raleway',
+              },
+            },
+            y: {
+              ticks: {
+                maxTicksLimit: 5,
+              },
+
+              font: {
+                family: 'Raleway'
+              },
+            }
+          },
+          plugins: {
+            title: {
+              display: true,
+              text: 'Ejecución de cordón cuneta por barrio (mts.)',
+              align: 'start',
+              font: {
+                family: 'Titillium Web',
+                size: 20,
+              },
+            },
+             legend: {
+              display: false
+            },
+          }
+        }
+      });
+    } else {
+      inViewayudas = false;
+    }
+  }
+}
+$(window).scroll(function () {
+
+  animarcordones();
+
+});
+
+$(window).load(function () {
+
+
+  animarcordones();
+
+});
+
+var chartseconomiacreditos = {}
+var inVieweconomiacreditos = false;
+
+function animareconomiacreditos() {
+  for (var i = 0; i < 1; i++) {
+    var idElement = "economiacreditos";
+    if (isScrolledIntoView('#' + idElement)) {
+      if (chartseconomiacreditos[idElement]) { continue }
+      chartseconomiacreditos[idElement] = true;
+
+      var ctx = document.getElementById(idElement);
+
+      if (inVieweconomiacreditos) { return; }
+      inVieweconomiacreditos = true;
+      return new Chart(ctx, {
+        type: 'bar',
+        data: {
+
+          labels: ['Enero', 'Marzo', 'Junio'],
+          datasets: [
+            {
+              data: [1530000, 1690000, 2570000],
+              borderColor: [
+
+                'rgba(105, 190, 190, 1)',
+                'rgba(71, 123, 168, 1)',
+                'rgba(215, 90, 218, 1)',
+                'rgba(240, 150, 145, 1)',
+                'rgba(35, 145, 200, 1)',
+              ],
+              backgroundColor: [
+
+                'rgba(105, 190, 190, 1)',
+                'rgba(71, 123, 168, 1)',
+                'rgba(215, 90, 218, 1)',
+                'rgba(240, 150, 145, 1)',
+                'rgba(35, 145, 200, 1)',
+
+              ],
+            },
+
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            x: {
+              font: {
+                family: 'Raleway',
+              },
+            },
+            y: {
+              ticks: {
+                maxTicksLimit: 5,
+              },
+
+              font: {
+                family: 'Raleway'
+              },
+            }
+          },
+          legend: {
+            display: false
+          },
+          plugins: {
+            title: {
+              display: true,
+              text: 'Créditos entregados por fecha ($)',
+              align: 'start',
+              font: {
+                family: 'Titillium Web',
+                size: 20,
+              },
+            },
+            legend: {
+              display: false
+            },
+          }
+        }
+      });
+    } else {
+      inVieweconomiacreditos = false;
+    }
+  }
+}
+$(window).scroll(function () {
+
+  animareconomiacreditos();
+
+});
+
+$(window).load(function () {
+
+
+  animareconomiacreditos();
+
+});
+
+
+
+var chartsCreditosSector = {}
+var inViewCreditosSector = false;
+
+function animarCreditosSector() {
+  for (var i = 0; i < 1; i++) {
+    var idElement = "CreditosSector";
+    if (isScrolledIntoView('#' + idElement)) {
+      if (chartsCreditosSector[idElement]) { continue }
+      chartsCreditosSector[idElement] = true;
+
+      var ctx = document.getElementById(idElement);
+
+      if (inViewCreditosSector) { return; }
+      inViewCreditosSector = true;
+      return new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+
+          labels: ['Comercio', 'Produccion', 'Servicios'],
+          datasets: [
+            {
+              tension: 0.1,
+              fill: false,
+              data: [2250000, 1750000, 1790000],
+              fill: true,
+              backgroundColor: ['rgba(71, 123, 168, 1)', 'rgba(105, 190, 190, 1)', 'rgba(215, 90, 218, 1)'
+              ],
+              borderColor: [
+
+                'rgba(71, 123, 168, 1)', 'rgba(105, 190, 190, 1)', 'rgba(215, 90, 218, 1)'
+              ],
+
+              borderWidth: 2
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+
+            title: {
+              display: true,
+              text: 'Créditos entregados por actividad ($)',
+              align: 'start',
+              font: {
+                family: 'Titillium Web',
+                size: 20,
+              }
+            },
+            legend: true
+          }
+
+
+        }
+      });
+    } else {
+      inViewCreditosSector = false;
+    }
+  }
+}
+$(window).scroll(function () {
+
+  animarCreditosSector();
+
+});
+
+$(window).load(function () {
+
+
+  animarCreditosSector();
 
 });

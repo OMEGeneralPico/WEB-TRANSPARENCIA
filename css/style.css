@@ -166,6 +166,11 @@ text-align: right;
 .cd-fixed-background.img-1 {
   background-image: url("../img/fondo0.jpg");
 }
+.cd-fixed-background.img-0 {
+  background-image: url("../img/fondoIntro.png");
+}
+
+
 
 @media only screen and (min-width: 1150px) {
 
@@ -196,6 +201,13 @@ text-align: right;
   .cd-fixed-background .cd-content::after {
     display: none !important;
   }
+  .cd-fixed-background.img-1 {
+    background-image: url("../img/fondo0.jpg");
+  }
+  .cd-fixed-background.img-0 {
+    background-image: url("../img/fondoIntro.png");
+  }
+  
 
   .cd-fixed-background.img-2 {
     background-image: url("../img/fondo5.png");
@@ -608,7 +620,25 @@ gap: 1em;
 
 }
 
+.grid-primera{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 20% 80%;
+  width: 95%;
+  height: 100%;
+  align-items: center;
+  text-align: center;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 5em;
 
+}
+
+.grid-primera-item{
+  grid-column:1/4;
+  border-left: solid 5px black;
+  padding: 1em;
+}
 
 
 
@@ -717,6 +747,26 @@ gap: 1em;
   display: none;
 }
 
+.noesconder{
+  font-size: calc(30px + 0.8vw);
+  font-weight: 700;
+  line-height: 1.8;
+  font-family: 'Titillium Web', sans-serif !important;
+  color: #000000 !important;
+  text-align: end;
+  background-color:rgba(114, 114, 114, 0.15);
+
+  border-right:solid 5px black;
+
+ width: 90%;
+
+
+
+ padding-right: 1em;
+
+
+}
+
 @media only screen and (max-width: 1150px) {
   .esconder{
     font-size: calc(30px + 0.8vw);
@@ -776,7 +826,13 @@ gap: 1em;
     display:none;
   }
   
+
+
   .grid0{
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    width: 90%;
+  }
+  .grid-primera{
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 
   }
@@ -793,9 +849,6 @@ gap: 1em;
 
 
 
-.grid0{
-  width: 90%;
-}
   .grid1{
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
@@ -1006,3 +1059,4 @@ a.button8{
   width: calc(550px + 10vw);
   max-width: 90%;
 }
+
