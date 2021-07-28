@@ -624,13 +624,13 @@ gap: 1em;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 
-  width: 95%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   align-items: center;
   text-align: center;
   padding-left: 2em;
   padding-right: 2em;
-  padding-top: 5em;
+
 
 }
 
@@ -691,6 +691,15 @@ gap: 1em;
   min-height: 300px;
   min-width: 300px;
   width: 90%;
+}
+
+.grid-primera{
+  gap: 1em;
+  padding-left: 1em;
+}
+  .grid-primera-item{
+    width: 90%;
+  }
 
 }
 
@@ -836,8 +845,12 @@ gap: 1em;
     display: flex;
     flex-direction: column;
     gap: 1em;
-    margin-left: 1em;
+    
 
+  }
+  
+  .grid-primera-item{
+    width: 90%;
   }
 
   .grid-item-a{
