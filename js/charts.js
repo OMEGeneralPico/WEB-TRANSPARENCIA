@@ -197,7 +197,7 @@ function animarrecursossecre() {
                 },
                 options: {
                     responsive: true,
-                    maintainAspectRatio: true,
+                    maintainAspectRatio: false,
                     scales: {
                         x: {
                             ticks: {
