@@ -1,5 +1,18 @@
-if (document.body.clientWidth < 1400) {
+console.log(document.body.clientWidth)
+
+/*
+if (document.body.clientWidth > 1400) {
     viewport = document.querySelector("meta[name=viewport]");
     viewport.setAttribute('content', 'width=device-width, initial-scale=0.67, user-scalable=0');
-    c
+    
+  }else{
+      console.log('fallo')
+  }
+  */
+  var scale = 'scale(1)';
+  if (document.body.clientWidth < 1400) {
+    document.body.style.zoom  = 0.67;
+    
+  }else{
+      console.log('fallo')
   }
