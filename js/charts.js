@@ -129,38 +129,38 @@ function animarrecursossecre() {
                             label: 'Jurisd. Comunal',
                             tension: 0.2,
                             fill: false,
-                
+
                             data: [68.83, 81.19, 137.19, 112.42, 86.81, 103.21],
-   
+
                             backgroundColor: [
-                
+
                                 'rgba(105, 190, 190, 1)'
                             ],
-      
+
                         },
                         {
                             label: 'Reg. de coparticipación',
                             tension: 0.2,
                             fill: false,
-                
+
                             data: [78.79, 91.28, 120.23, 99.98, 120.19, 97.55],
 
                             backgroundColor: [
-                
+
                                 'rgba(71, 123, 168, 1)'
                             ],
 
-                            
+
                         },
                         {
                             label: 'Ant. Coparticipación',
                             tension: 0.2,
                             fill: false,
-                
+
                             data: [0, 0, 10.93, 0, 0, 0],
 
                             backgroundColor: [
-                
+
                                 'rgba(35, 145, 200, 1)'
                             ],
 
@@ -169,11 +169,11 @@ function animarrecursossecre() {
                             label: 'Rec. de capital',
                             tension: 0.2,
                             fill: false,
-                
+
                             data: [1.33, 1.25, 2.23, 1.61, 1.07, 1.39],
 
                             backgroundColor: [
-                
+
                                 'rgba(35, 145, 200, 1)'
                             ],
 
@@ -182,17 +182,17 @@ function animarrecursossecre() {
                             label: 'Aportes no reint.',
                             tension: 0.2,
                             fill: false,
-                
+
                             data: [15.35, 8.70, 0, 4.45, 20.26, 23.6],
 
                             backgroundColor: [
-                
+
                                 'rgba(35, 145, 200, 1)'
                             ],
 
                         }
 
-                        
+
                     ]
                 },
                 options: {
@@ -305,8 +305,10 @@ function animarpersonalsecre() {
                     ]
                 },
                 options: {
-                    scales: {y:{ticks:{font:{family:'Raleway'}}},
-                    x:{ticks:{font:{family:'Raleway'}}}},
+                    scales: {
+                        y: { ticks: { font: { family: 'Raleway' } } },
+                        x: { ticks: { font: { family: 'Raleway' } } }
+                    },
                     indexAxis: 'y',
                     responsive: true,
                     maintainAspectRatio: false,
@@ -828,95 +830,83 @@ var chartscordones = {}
 var inViewcordones = false;
 
 function animarcordones() {
-  for (var i = 0; i < 1; i++) {
-    var idElement = "cordones";
-    if (isScrolledIntoView('#' + idElement)) {
-      if (chartscordones[idElement]) { continue }
-      chartscordones[idElement] = true;
+    for (var i = 0; i < 1; i++) {
+        var idElement = "cordones";
+        if (isScrolledIntoView('#' + idElement)) {
+            if (chartscordones[idElement]) { continue }
+            chartscordones[idElement] = true;
 
-      var ctx = document.getElementById(idElement);
+            var ctx = document.getElementById(idElement);
 
-      if (inViewcordones) { return; }
-      inViewcordones = true;
-      return new Chart(ctx, {
-        type: 'bar',
-        data: {
+            if (inViewcordones) { return; }
+            inViewcordones = true;
+            return new Chart(ctx, {
+                type: 'bar',
+                data: {
 
-          labels: ['Norte', 'Ranqueles/E.&Prog.', 'Universitario','Federal Bicentenario'],
-          datasets: [
-            {
-              data: [2339.5, 2560, 806,821.5],
-              borderColor: [
+                    labels: ['Norte', 'Ranqueles/E.&Prog.', 'Universitario', 'Federal Bicentenario'],
+                    datasets: [
+                        {
+                            data: [2339.5, 2560, 806, 821.5],
+                            borderColor: [
 
-                'rgba(105, 190, 190, 1)',
-                'rgba(71, 123, 168, 1)',
-                'rgba(215, 90, 218, 1)',
-                'rgba(240, 150, 145, 1)',
-                'rgba(35, 145, 200, 1)',
-              ],
-              backgroundColor: [
+                                'rgba(105, 190, 190, 1)',
+                                'rgba(71, 123, 168, 1)',
+                                'rgba(215, 90, 218, 1)',
+                                'rgba(240, 150, 145, 1)',
+                                'rgba(35, 145, 200, 1)',
+                            ],
+                            backgroundColor: [
 
-                'rgba(105, 190, 190, 1)',
-                'rgba(71, 123, 168, 1)',
-                'rgba(215, 90, 218, 1)',
-                'rgba(240, 150, 145, 1)',
-                'rgba(35, 145, 200, 1)',
+                                'rgba(105, 190, 190, 1)',
+                                'rgba(71, 123, 168, 1)',
+                                'rgba(215, 90, 218, 1)',
+                                'rgba(240, 150, 145, 1)',
+                                'rgba(35, 145, 200, 1)',
 
-              ],
-            },
+                            ],
+                        },
 
-          ]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          scales: {
-            x: {
-              font: {
-                family: 'Raleway',
-              },
-            },
-            y: {
-              ticks: {
-                maxTicksLimit: 5,
-              },
-
-              font: {
-                family: 'Raleway'
-              },
-            }
-          },
-          plugins: {
-            title: {
-              display: true,
-              text: 'Ejecución de cordón cuneta por barrio (mts.)',
-              align: 'start',
-              font: {
-                family: 'Titillium Web',
-                size: 20,
-              },
-            },
-             legend: {
-              display: false
-            },
-          }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: { ticks: { font: { family: 'Raleway' } } },
+                        x: { ticks: { font: { family: 'Raleway' } } }
+                    },
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Ejecución de cordón cuneta por barrio (mts.)',
+                            align: 'start',
+                            font: {
+                                family: 'Titillium Web',
+                                size: 20,
+                            },
+                        },
+                        legend: {
+                            display: false
+                        },
+                    }
+                }
+            });
+        } else {
+            inViewayudas = false;
         }
-      });
-    } else {
-      inViewayudas = false;
     }
-  }
 }
 $(window).scroll(function () {
 
-  animarcordones();
+    animarcordones();
 
 });
 
 $(window).load(function () {
 
 
-  animarcordones();
+    animarcordones();
 
 });
 
@@ -924,98 +914,86 @@ var chartseconomiacreditos = {}
 var inVieweconomiacreditos = false;
 
 function animareconomiacreditos() {
-  for (var i = 0; i < 1; i++) {
-    var idElement = "economiacreditos";
-    if (isScrolledIntoView('#' + idElement)) {
-      if (chartseconomiacreditos[idElement]) { continue }
-      chartseconomiacreditos[idElement] = true;
+    for (var i = 0; i < 1; i++) {
+        var idElement = "economiacreditos";
+        if (isScrolledIntoView('#' + idElement)) {
+            if (chartseconomiacreditos[idElement]) { continue }
+            chartseconomiacreditos[idElement] = true;
 
-      var ctx = document.getElementById(idElement);
+            var ctx = document.getElementById(idElement);
 
-      if (inVieweconomiacreditos) { return; }
-      inVieweconomiacreditos = true;
-      return new Chart(ctx, {
-        type: 'bar',
-        data: {
+            if (inVieweconomiacreditos) { return; }
+            inVieweconomiacreditos = true;
+            return new Chart(ctx, {
+                type: 'bar',
+                data: {
 
-          labels: ['Enero', 'Marzo', 'Junio'],
-          datasets: [
-            {
-              data: [1530000, 1690000, 2570000],
-              borderColor: [
+                    labels: ['Enero', 'Marzo', 'Junio'],
+                    datasets: [
+                        {
+                            data: [1530000, 1690000, 2570000],
+                            borderColor: [
 
-                'rgba(105, 190, 190, 1)',
-                'rgba(71, 123, 168, 1)',
-                'rgba(215, 90, 218, 1)',
-                'rgba(240, 150, 145, 1)',
-                'rgba(35, 145, 200, 1)',
-              ],
-              backgroundColor: [
+                                'rgba(105, 190, 190, 1)',
+                                'rgba(71, 123, 168, 1)',
+                                'rgba(215, 90, 218, 1)',
+                                'rgba(240, 150, 145, 1)',
+                                'rgba(35, 145, 200, 1)',
+                            ],
+                            backgroundColor: [
 
-                'rgba(105, 190, 190, 1)',
-                'rgba(71, 123, 168, 1)',
-                'rgba(215, 90, 218, 1)',
-                'rgba(240, 150, 145, 1)',
-                'rgba(35, 145, 200, 1)',
+                                'rgba(105, 190, 190, 1)',
+                                'rgba(71, 123, 168, 1)',
+                                'rgba(215, 90, 218, 1)',
+                                'rgba(240, 150, 145, 1)',
+                                'rgba(35, 145, 200, 1)',
 
-              ],
-            },
+                            ],
+                        },
 
-          ]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          scales: {
-            x: {
-              font: {
-                family: 'Raleway',
-              },
-            },
-            y: {
-              ticks: {
-                maxTicksLimit: 5,
-              },
-
-              font: {
-                family: 'Raleway'
-              },
-            }
-          },
-          legend: {
-            display: false
-          },
-          plugins: {
-            title: {
-              display: true,
-              text: 'Créditos entregados por fecha ($)',
-              align: 'start',
-              font: {
-                family: 'Titillium Web',
-                size: 20,
-              },
-            },
-            legend: {
-              display: false
-            },
-          }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: { ticks: { font: { family: 'Raleway' } } },
+                        x: { ticks: { font: { family: 'Raleway' } } }
+                    },
+                    legend: {
+                        display: false
+                    },
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Créditos entregados por fecha ($)',
+                            align: 'start',
+                            font: {
+                                family: 'Titillium Web',
+                                size: 20,
+                            },
+                        },
+                        legend: {
+                            display: false
+                        },
+                    }
+                }
+            });
+        } else {
+            inVieweconomiacreditos = false;
         }
-      });
-    } else {
-      inVieweconomiacreditos = false;
     }
-  }
 }
 $(window).scroll(function () {
 
-  animareconomiacreditos();
+    animareconomiacreditos();
 
 });
 
 $(window).load(function () {
 
 
-  animareconomiacreditos();
+    animareconomiacreditos();
 
 });
 
@@ -1025,72 +1003,90 @@ var chartsCreditosSector = {}
 var inViewCreditosSector = false;
 
 function animarCreditosSector() {
-  for (var i = 0; i < 1; i++) {
-    var idElement = "CreditosSector";
-    if (isScrolledIntoView('#' + idElement)) {
-      if (chartsCreditosSector[idElement]) { continue }
-      chartsCreditosSector[idElement] = true;
+    for (var i = 0; i < 1; i++) {
+        var idElement = "CreditosSector";
+        if (isScrolledIntoView('#' + idElement)) {
+            if (chartsCreditosSector[idElement]) { continue }
+            chartsCreditosSector[idElement] = true;
 
-      var ctx = document.getElementById(idElement);
+            var ctx = document.getElementById(idElement);
 
-      if (inViewCreditosSector) { return; }
-      inViewCreditosSector = true;
-      return new Chart(ctx, {
-        type: 'doughnut',
-        data: {
+            if (inViewCreditosSector) { return; }
+            inViewCreditosSector = true;
+            return new Chart(ctx, {
+                type: 'polarArea',
+                data: {
 
-          labels: ['Comercio', 'Produccion', 'Servicios'],
-          datasets: [
-            {
-              tension: 0.1,
-              fill: false,
-              data: [2250000, 1750000, 1790000],
-              fill: true,
-              backgroundColor: ['rgba(71, 123, 168, 1)', 'rgba(105, 190, 190, 1)', 'rgba(215, 90, 218, 1)'
-              ],
-              borderColor: [
+                    labels: ['Comercio', 'Produccion', 'Servicios'],
+                    datasets: [
+                        {
+                            tension: 0.1,
+                            fill: false,
+                            data: [2250000, 1750000, 1790000],
+                            fill: true,
+                            backgroundColor: ['rgba(71, 123, 168, 0.75)', 'rgba(105, 190, 190, 0.75)', 'rgba(215, 90, 218, 0.75)'
+                            ],
+                            borderColor: [
 
-                'rgba(71, 123, 168, 1)', 'rgba(105, 190, 190, 1)', 'rgba(215, 90, 218, 1)'
-              ],
+                                'rgba(71, 123, 168, 1)', 'rgba(105, 190, 190, 1)', 'rgba(215, 90, 218, 1)'
+                            ],
 
-              borderWidth: 2
-            }
-          ]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: {
+                            borderWidth: 2
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scale: {
+                        max: 3000000,
+                        stepSize: 1000000,
+                        r: {
+                            ticks: {                    
+                                
+                                
+                                font: { family: 'Raleway' } },
 
-            title: {
-              display: true,
-              text: 'Créditos entregados por actividad ($)',
-              align: 'start',
-              font: {
-                family: 'Titillium Web',
-                size: 20,
-              }
-            },
-            legend: true
-          }
+                        }
+                    },
+
+                    plugins: {
+
+                        title: {
+                            display: true,
+                            text: 'Créditos entregados por actividad ($)',
+                            align: 'start',
+                            font: {
+                                family: 'Titillium Web',
+                                size: 20,
+                            }
+                        },
+                        legend: {
+                            display: true,
+                            position: 'right',
+                            align: 'middle',
+                            labels: { font: { family: 'Raleway' } }
+                        }
+
+                    }
 
 
+                }
+            });
+        } else {
+            inViewCreditosSector = false;
         }
-      });
-    } else {
-      inViewCreditosSector = false;
     }
-  }
 }
 $(window).scroll(function () {
 
-  animarCreditosSector();
+    animarCreditosSector();
 
 });
 
 $(window).load(function () {
 
 
-  animarCreditosSector();
+    animarCreditosSector();
 
 });
