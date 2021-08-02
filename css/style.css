@@ -514,6 +514,9 @@ height: 100%;
 
  
 /* Color de fondo para cada slide*/
+.cd-fixed-background.img-0 {
+  background-color: #fcfeff;
+}
 .cd-fixed-background.img-1 {
   background-color: #EAEEE2;
 }
@@ -638,6 +641,14 @@ gap: 1em;
   grid-column:1/4;
   border-left: solid 5px black;
   padding: 1em;
+  width: 70%;
+
+}
+
+
+.grid-primera{
+  gap: 1em;
+  padding-left: 1em;
 }
 
 
@@ -690,16 +701,9 @@ gap: 1em;
 
   min-height: 300px;
   min-width: 300px;
-  width: 90%;
+
 }
 
-.grid-primera{
-  gap: 1em;
-  padding-left: 1em;
-}
-  .grid-primera-item{
-    width: 90%;
-  }
 
 
 
@@ -735,8 +739,8 @@ gap: 1em;
   .cd-fixed-background p {
     font-size: calc(7px + 0.7vw);
     line-height: 1.8;
-    font-family: 'Raleway', sans-serif !important;
-    color: #000000 !important;
+    font-family: 'Raleway', sans-serif ;
+    color: #000000 ;
   }
 .cd-fixed-background h2{
   font-size: calc(20px + 0.8vw);
@@ -1012,7 +1016,7 @@ a.button8{
   font-family:'Raleway';
   font-weight:700;
   color: black;
-  background-color:rgba(255,255,255,0.5);
+  background-color: rgba(114, 114, 114, 0.15);;
   text-align:center;
   position:relative;
   }
@@ -1076,3 +1080,10 @@ a.button8{
   max-width: 90%;
 }
 
+.citas{
+  font-weight: 700;
+  font-size: 1.2vw !important;
+  font-family: 'Titillium Web' !important;
+  text-align: left;
+
+}

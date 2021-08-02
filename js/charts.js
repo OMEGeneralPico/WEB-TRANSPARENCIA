@@ -47,6 +47,10 @@ function animarpresupuestosecre() {
 
                                 'rgba(240, 150, 145, 1)',
                                 'rgba(35, 145, 200, 1)',
+                                'rgba(221, 227, 146, 1)',
+                                'rgba(254, 228, 64, 1)',
+                                'rgba(53, 20, 49, 1)',
+                                'rgba(101, 76, 79, 1)',
                             ],
 
 
@@ -565,17 +569,19 @@ function animarAmbiente() {
                     maintainAspectRatio: false,
                     scales: {
                         x: {
-                            font: {
-                                family: 'Raleway',
+                            ticks: {
+                                font: { family: 'Raleway' }
                             },
+                            stacked: true
                         },
                         y: {
                             ticks: {
+                                font: { family: 'Raleway' },
                                 maxTicksLimit: 5,
                             },
-
+                            stacked: true,
                             font: {
-                                family: 'Raleway'
+                                family: 'Titillium Web'
                             },
                         }
                     },
@@ -586,7 +592,7 @@ function animarAmbiente() {
                         legend: false,
                         title: {
                             display: true,
-                            text: 'Material Recuperado',
+                            text: 'Material recuperado (kgs.)',
                             align: 'start',
                             font: {
                                 family: 'Titillium Web',
@@ -676,7 +682,7 @@ function animarGobierno() {
                         },
                         title: {
                             display: true,
-                            text: 'Actividades área de Inspeccion',
+                            text: 'Actividades área de Inspección',
                             align: 'start',
                             font: {
                                 family: 'Titillium Web',
@@ -688,24 +694,20 @@ function animarGobierno() {
                     maintainAspectRatio: false,
                     scales: {
                         x: {
-                            font: {
-                                family: 'Raleway'
-                            },
-                            grid: {
-                                display: false,
-                            },
                             ticks: {
-                                maxRotation: 0
+                                font: { family: 'Raleway' }
                             },
-                            stacked: true,
+                            stacked: true
                         },
                         y: {
-                            font: {
-                                family: 'Raleway'
+                            ticks: {
+                                font: { family: 'Raleway' },
+                                maxTicksLimit: 5,
                             },
-                            ticks: { maxTicksLimit: 5 },
-                            beginAtZero: true,
                             stacked: true,
+                            font: {
+                                family: 'Titillium Web'
+                            },
                         }
                     }
                 }
@@ -751,11 +753,11 @@ function animarIntendencia() {
             return new Chart(ctx, {
                 type: 'doughnut',
                 data: {
-                    labels: ['Asesoria Legal', 'Resoluciones', 'Disposiciones', 'Proyectos de Ordenanzas', 'Ordenanzas Promulgadas'],
+                    labels: [ 'Resoluciones', 'Disposiciones', 'Proyectos de Ordenanzas', 'Ordenanzas Promulgadas'],
                     datasets: [
 
                         {
-                            data: [600, 2213, 28, 51, 49],
+                            data: [ 2213, 28, 51, 49],
                             backgroundColor: [
                                 'rgba(71, 123, 168, 1)',
                                 'rgba(105, 190, 190, 1)',
@@ -1088,5 +1090,399 @@ $(window).load(function () {
 
 
     animarCreditosSector();
+
+});
+
+
+var chartambientezoo = {}
+var inViewambientezoo = false;
+
+function animarambientezoo() {
+    for (var i = 0; i < 1; i++) {
+        var idElement = "ambientezoo";
+        if (isScrolledIntoView('#' + idElement)) {
+            if (chartambientezoo[idElement]) { continue }
+            chartambientezoo[idElement] = true;
+
+            var ctx = document.getElementById(idElement);
+
+            if (inViewambientezoo) { return; }
+            inViewambientezoo = true;
+            return new Chart(ctx, {
+                type: 'bar',
+                data: {
+
+                    labels: ['Castraciones ', 'Vacunaciones ', 'Desinfecciónes '],
+                    datasets: [
+                        {
+                            data: [1207, 317, 96],
+                            borderColor: [
+
+                                'rgba(105, 190, 190, 1)',
+                                'rgba(71, 123, 168, 1)',
+                                'rgba(215, 90, 218, 1)',
+                                'rgba(240, 150, 145, 1)',
+                                'rgba(35, 145, 200, 1)',
+                            ],
+                            backgroundColor: [
+
+                                'rgba(105, 190, 190, 1)',
+                                'rgba(71, 123, 168, 1)',
+                                'rgba(215, 90, 218, 1)',
+                                'rgba(240, 150, 145, 1)',
+                                'rgba(35, 145, 200, 1)',
+
+                            ],
+                        },
+
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: { ticks: { font: { family: 'Raleway' } } },
+                        x: { ticks: { font: { family: 'Raleway' } } }
+                    },
+                    legend: {
+                        display: false
+                    },
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Actividades de zoonosis',
+                            align: 'start',
+                            font: {
+                                family: 'Titillium Web',
+                                size: 20,
+                            },
+                        },
+                        legend: {
+                            display: false
+                        },
+                    }
+                }
+            });
+        } else {
+            inVieweconomiacreditos = false;
+        }
+    }
+}
+$(window).scroll(function () {
+
+    animarambientezoo();
+
+});
+
+$(window).load(function () {
+
+
+    animarambientezoo();
+
+});
+
+
+
+var chartplanifobras = {}
+var inViewplanifobras = false;
+
+function animarplanifobras() {
+    for (var i = 0; i < 1; i++) {
+        var idElement = "planifobras";
+        if (isScrolledIntoView('#' + idElement)) {
+            if (chartplanifobras[idElement]) { continue }
+            chartplanifobras[idElement] = true;
+
+            var ctx = document.getElementById(idElement);
+
+            if (inViewplanifobras) { return; }
+            inViewplanifobras = true;
+            return new Chart(ctx, {
+                type: 'bar',
+                data: {
+
+                    labels: ['Conexión de gas natural', 'Conexión de cloacas', 'Conexión de agua potable', 'Obras de gas natural', 'Otras'],
+                    datasets: [
+                        {
+                            tension: 0.1,
+                            fill: false,
+                            data: [183, 66, 61, 15, 30],
+                            fill: true,
+                            backgroundColor: ['rgba(71, 123, 168, 1)', 'rgba(105, 190, 190, 1)', 'rgba(215, 90, 218, 0.5)',
+
+
+
+                                'rgba(240, 150, 145, 1)',
+                                'rgba(35, 145, 200, 1)',
+                            ],
+
+
+                            borderWidth: 4,
+                            borderColor: [
+
+                                'rgba(234,238,226,0)'
+                            ],
+
+                        }
+                    ]
+                },
+                options: {
+                    scales: {
+                        y: { ticks: { font: { family: 'Raleway' } } },
+                        x: { ticks: { font: { family: 'Raleway' } } }
+                    },
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+
+                        title: {
+                            display: true,
+                            text: 'Permisos de trabajo en via pública',
+                            align: 'center',
+                            font: {
+                                family: 'Titillium Web',
+                                size: 20,
+                            }
+                        },
+                        legend: {
+                            display: false,
+                            position: 'right',
+                            align: 'middle',
+                            labels: { font: { family: 'Raleway' } }
+                        },
+                    },
+
+
+
+                }
+            });
+        } else {
+            inViewppersonalsecre = false;
+        }
+    }
+}
+$(window).scroll(function () {
+
+    animarplanifobras();
+
+});
+
+$(window).load(function () {
+
+
+    animarplanifobras();
+
+});
+
+
+
+var chartmicro = {}
+var inviewmicro = false;
+
+function animarmicro() {
+    for (var i = 0; i < 1; i++) {
+        var idElement = "desarrollomicro";
+        if (isScrolledIntoView('#' + idElement)) {
+            if (chartmicro[idElement]) { continue }
+            chartmicro[idElement] = true;
+
+            var ctx = document.getElementById(idElement);
+
+            if (inviewmicro) { return; }
+            inviewmicro = true;
+            return new Chart(ctx, {
+                type: 'bar',
+                data: {
+
+                    labels: ['Entrevistas', 'Evaluaciones', 'Seguimiento'],
+                    datasets: [
+                        {
+                            tension: 0.1,
+                            fill: false,
+                            data: [139, 63, 22],
+                            fill: true,
+                            backgroundColor: ['rgba(71, 123, 168, 1)', 'rgba(105, 190, 190, 1)', 'rgba(215, 90, 218, 0.5)',
+
+
+
+                                'rgba(240, 150, 145, 1)',
+                                'rgba(35, 145, 200, 1)',
+                            ],
+
+
+                            borderWidth: 4,
+                            borderColor: [
+
+                                'rgba(234,238,226,0)'
+                            ],
+
+                        }
+                    ]
+                },
+                options: {
+                    scales: {
+                        y: { ticks: { font: { family: 'Raleway' } } },
+                        x: { ticks: { font: { family: 'Raleway' } } }
+                    },
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+
+                        title: {
+                            display: true,
+                            text: 'Actividades de microcréditos',
+                            align: 'center',
+                            font: {
+                                family: 'Titillium Web',
+                                size: 20,
+                            }
+                        },
+                        legend: {
+                            display: false,
+                            position: 'right',
+                            align: 'middle',
+                            labels: { font: { family: 'Raleway' } }
+                        },
+                    },
+
+
+
+                }
+            });
+        } else {
+            inViewppersonalsecre = false;
+        }
+    }
+}
+$(window).scroll(function () {
+
+    animarmicro();
+
+});
+
+$(window).load(function () {
+
+
+    animarmicro();
+
+});
+
+var chartatraques = {}
+var InViewatraques = false;
+
+function animaratraques() {
+    for (var i = 0; i < 1; i++) {
+        var idElement = "atraques";
+        if (isScrolledIntoView('#' + idElement)) {
+            if (chartatraques[idElement]) { continue }
+            chartatraques[idElement] = true;
+
+            var ctx = document.getElementById(idElement);
+
+            if (InViewatraques) { return; }
+            InViewatraques = true;
+            return new Chart(ctx, {
+                type: 'bar',
+                data: {
+
+                    /*labels: ['Jurisd. Comunal', 'Otras Jurisd.', 'Ant. Coparticipación', 'Rec. de capital', 'Aportes no reint.'],*/
+                    labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Junio'],
+                    datasets: [
+                        {
+                            label: 'Larga distancia',
+                            tension: 0.2,
+                            fill: false,
+
+                            data: [371,379,360,313,271,70],
+
+                            backgroundColor: [
+
+                                'rgba(105, 190, 190, 1)'
+                            ],
+
+                        },
+                        {
+                            label: 'Corta y media distancia',
+                            tension: 0.2,
+                            fill: false,
+
+                            data: [354,351,429,365,330,166],
+
+                            backgroundColor: [
+
+                                'rgba(71, 123, 168, 1)'
+                            ],
+
+
+                        }
+
+
+
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: {
+                            ticks: {
+                                font: { family: 'Raleway' }
+                            },
+                            stacked: true
+                        },
+                        y: {
+                            ticks: {
+                                font: { family: 'Raleway' },
+                                maxTicksLimit: 5,
+                            },
+                            stacked: true,
+                            font: {
+                                family: 'Titillium Web'
+                            },
+                        }
+                    },
+                    legend: {
+                        display: true,
+                        position: 'right',
+                        align: 'middle',
+                        labels: { font: { family: 'Raleway' } },
+                    },
+                    plugins: {
+                        legend: {
+                            labels: {
+                                font: {
+                                    family: 'Raleway'
+                                }
+                            }
+                        },
+                        title: {
+                            display: true,
+                            text: 'Atraques en Terminal de Ómnibus ',
+                            align: 'start',
+                            font: {
+                                family: 'Titillium Web',
+                                size: 20,
+                            },
+                        }
+                    }
+                }
+            });
+        } else {
+            InViewatraques = false;
+        }
+    }
+}
+$(window).scroll(function () {
+
+    animaratraques();
+
+});
+
+$(window).load(function () {
+
+
+    animaratraques();
 
 });

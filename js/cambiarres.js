@@ -10,8 +10,9 @@ if (document.body.clientWidth > 1400) {
   }
   */
   var scale = 'scale(1)';
-  if (document.body.clientWidth < 1400) {
-    document.body.style.zoom  = 0.67;
+  if (document.body.clientWidth < 1400 && document.body.clientWidth > 1150) {
+    document.body.style.zoom  = 0.75;
+    console.log('entro')
     
   }else{
       console.log('fallo')
