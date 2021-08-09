@@ -287,10 +287,10 @@ text-align: right;
   transition: opacity 0.2s 0s, visibility 0s 0.2s;
 }
 
-/*tamaño minimo para las flechas de navegacion */
+/*tamaño minimo para las flechas de navegacion - cambiar para mostrar */
 @media only screen and (min-width: 1150px) {
   .cd-vertical-nav {
-    display: block;
+    display: none;
   }
 
   }
@@ -1086,4 +1086,52 @@ a.button8{
   font-family: 'Titillium Web' !important;
   text-align: left;
 
+}
+
+
+
+.mouse{
+  position: absolute;
+  bottom: 3rem;
+  width: 1rem;
+  margin-left: 50%;
+  margin-right: 50%;
+}
+
+.mouse{
+  opacity: 0;
+  animation: mainFadeIn 1.5s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+  animation-delay: 3.2s;
+}
+.mouse-icon{
+ width: 2vw;
+ height: 3.5vw;
+ border: 0.2vw solid white;
+ border-radius: 10rem;
+ cursor: pointer;
+ position: relative;
+ text-align: center;
+
+}
+.mouse-wheel{
+height: 0.3vw;
+margin: 10px auto 0;
+display: block;
+width: 0.3vw;
+background-color: white;
+border-radius: 100%;
+animation: 1.5s ease infinite wheel-up-down;
+}
+@keyframes wheel-up-down {
+0% {
+margin-top: 7px;
+opacity: 0;
+}
+30% {
+opacity: 1;
+}
+100% {
+margin-top: 1.5vw;
+opacity: 0;
+}
 }
