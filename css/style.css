@@ -935,12 +935,16 @@ gap: 1em;
     width: 95vh;
   }
 
+  .mouse {
+    display: none;
+  }
+
 }
 
 /*tamaño intermedio */
 
 
-}
+
 
 /*
 .grid-mapa2{
