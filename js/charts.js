@@ -481,7 +481,7 @@ function animarAyuda() {
                         },
                         title: {
                             display: true,
-                            text: 'Subsidios a personas por concepto',
+                            text: 'Subsidios a personas por concepto ($)',
                             align: 'start',
                             font: {
                                 family: 'Titillium Web',
