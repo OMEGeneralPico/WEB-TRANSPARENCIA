@@ -659,7 +659,7 @@ gap: 1em;
     width: 90%;
   }
   .grid1{
-    width:90%;
+    width:95%;
   }
   .grid2{
     width:90%;
@@ -672,13 +672,14 @@ gap: 1em;
   }
   .grid2-item-a{
     grid-column: 1/ span 2;  
-    width: 90%;
+    width: 95%;
 
 }
 
   .grid-item{
 
     grid-column: 1/4;
+    width: 95%;
   }
 
 
@@ -719,7 +720,7 @@ gap: 1em;
   align-items: center;
   min-height: 300px;
   min-width: 300px;
-  width: 90%;
+  width: 95%;
 }
 
 
@@ -728,7 +729,7 @@ gap: 1em;
   align-items: start;
   min-height: 300px;
   min-width: 300px;
-  width: 90%;
+  width: 95%;
 }
 
 
@@ -825,7 +826,19 @@ gap: 1em;
 
 /*Mobile */
 @media only screen and (max-width: 500px) {
+  .grid-primera-item{
+    width: 90%;
+  }
+ 
+ 
+  .button8 {
+    font-size: 1.5rem;
+  }
+  
+  td, th {
 
+    font-size: 1.8rem;
+}
   body{
     position: relative;
   }
@@ -858,7 +871,7 @@ gap: 1em;
   }
 
   .grid-item-a{
-
+    width:100%;
     grid-column: 1/4;
   }
 
