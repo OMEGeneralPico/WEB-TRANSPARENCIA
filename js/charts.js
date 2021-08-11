@@ -39,7 +39,7 @@ function animarpresupuestosecre() {
                         {
                             tension: 0.1,
                             fill: false,
-                            data: [4.08, 5.86, 14.05, 9.47, 24.27, 13.58, 7.88, 5.07, 15.74],
+                            data: [4.09, 5.87, 14.09, 9.47, 24.37, 13.61, 7.90, 5.08, 15.74],
                             fill: true,
                             backgroundColor: ['rgba(71, 123, 168, 1)', 'rgba(105, 190, 190, 1)', 'rgba(215, 90, 218, 0.5)',
 
