@@ -67,6 +67,17 @@ function animarpresupuestosecre() {
                     responsive: true,
                     maintainAspectRatio: false,
                     plugins: {
+                        datalabels: {
+                            anchor: 'end', // remove this line to get label in middle of the bar
+
+                            formatter: (val) => (`${val}%`),
+                            labels: {
+                                value: {
+                                    color: 'blue'
+                                }
+                            }
+
+                        },
 
                         title: {
                             display: true,
@@ -753,11 +764,11 @@ function animarIntendencia() {
             return new Chart(ctx, {
                 type: 'doughnut',
                 data: {
-                    labels: [ 'Resoluciones', 'Disposiciones', 'Proyectos de Ordenanzas', 'Ordenanzas Promulgadas'],
+                    labels: ['Resoluciones', 'Disposiciones', 'Proyectos de Ordenanzas', 'Ordenanzas Promulgadas'],
                     datasets: [
 
                         {
-                            data: [ 2213, 28, 51, 49],
+                            data: [2213, 28, 51, 49],
                             backgroundColor: [
                                 'rgba(71, 123, 168, 1)',
                                 'rgba(105, 190, 190, 1)',
@@ -1044,10 +1055,11 @@ function animarCreditosSector() {
                         max: 3000000,
                         stepSize: 1000000,
                         r: {
-                            ticks: {                    
-                                
-                                
-                                font: { family: 'Raleway' } },
+                            ticks: {
+
+
+                                font: { family: 'Raleway' }
+                            },
 
                         }
                     },
@@ -1395,7 +1407,7 @@ function animaratraques() {
                             tension: 0.2,
                             fill: false,
 
-                            data: [371,379,360,313,271,70],
+                            data: [371, 379, 360, 313, 271, 70],
 
                             backgroundColor: [
 
@@ -1408,7 +1420,7 @@ function animaratraques() {
                             tension: 0.2,
                             fill: false,
 
-                            data: [354,351,429,365,330,166],
+                            data: [354, 351, 429, 365, 330, 166],
 
                             backgroundColor: [
 
