@@ -31,7 +31,7 @@ function animarpresupuestosecre() {
             if (inViewpresupuestosecre) { return; }
             inViewpresupuestosecre = true;
             return new Chart(ctx, {
-                type: 'pie',
+                type:'doughnut',
                 data: {
 
                     labels: ['C.Deliberante', 'Intendencia', 'Gobierno', 'Planif. Urbana', 'Ambiente', 'Desarrollo Social', 'Economia', 'Org. Descentralizados', 'No programaticos'],
@@ -141,7 +141,7 @@ function animarrecursossecre() {
                     labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Junio'],
                     datasets: [
                         {
-                            label: 'Jurisd. Comunal',
+                            label: 'Recursos propios',
                             tension: 0.2,
                             fill: false,
 
@@ -154,11 +154,11 @@ function animarrecursossecre() {
 
                         },
                         {
-                            label: 'Reg. de coparticipación',
+                            label: 'Coparticipación',
                             tension: 0.2,
                             fill: false,
 
-                            data: [78.79, 91.28, 120.23, 99.98, 120.19, 97.55],
+                            data: [78.79, 91.28, 131.16, 99.98, 120.19, 97.55],
 
                             backgroundColor: [
 
@@ -167,19 +167,7 @@ function animarrecursossecre() {
 
 
                         },
-                        {
-                            label: 'Ant. Coparticipación',
-                            tension: 0.2,
-                            fill: false,
-
-                            data: [0, 0, 10.93, 0, 0, 0],
-
-                            backgroundColor: [
-
-                                'rgba(35, 145, 200, 1)'
-                            ],
-
-                        },
+                      
                         {
                             label: 'Rec. de capital',
                             tension: 0.2,
@@ -202,7 +190,7 @@ function animarrecursossecre() {
 
                             backgroundColor: [
 
-                                'rgba(35, 145, 200, 1)'
+                                'rgba(215, 90, 218, 1)'
                             ],
 
                         }
@@ -247,7 +235,7 @@ function animarrecursossecre() {
                         },
                         title: {
                             display: true,
-                            text: 'Recursos asignados 2021 (en millones $)',
+                            text: 'Ingresos en 2021 (en millones $)',
                             align: 'center',
                             font: {
                                 family: 'Titillium Web',
