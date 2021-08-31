@@ -1,6 +1,7 @@
 function generarchart(etiquetas, data2, ctx) {
 
   return new Chart(ctx, {
+    plugins: [ChartDataLabels],
     type: 'doughnut',
     data: {
       labels: etiquetas,
@@ -36,6 +37,20 @@ function generarchart(etiquetas, data2, ctx) {
       responsive: true,
       maintainAspectRatio: false,
       plugins: {
+       
+          datalabels: {
+            display: 'auto',
+            formatter: function (value) {
+              if (value>1000000) {return  '$' + Math.round((value/1000000)*10)/10} else return ''  ;
+            },
+            color: 'white',
+            font: {
+               
+             
+              family: 'Raleway'
+            }
+          },
+        
         title: {
           display: true,
           text: 'Gasto ejecutado por rubro ($)',

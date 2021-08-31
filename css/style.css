@@ -91,7 +91,7 @@ text-align: right;
 .cd-header .h1 .title .block {
   width: 0%;
   height: 100%;
-  background: rgba(105, 190, 190, 1);
+  background: rgb(255, 255, 255);
   position: absolute;
   animation: mainBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
 
@@ -311,6 +311,7 @@ text-align: right;
   overflow: hidden;
   width:auto;
   height: 100%;
+
 }
 
 
@@ -322,7 +323,7 @@ text-align: right;
     position: absolute;
     top: 35%;
 
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(105, 190, 190, 0.6);
     color: #f1f1f1;
     padding: 3%;
     overflow: hidden;
