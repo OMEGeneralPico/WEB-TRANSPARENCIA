@@ -1486,3 +1486,97 @@ $(window).load(function () {
     animaratraques();
 
 });
+
+
+
+var chartactcomercio = {}
+var inViewactcomercio = false;
+
+function animaractcomercio() {
+    for (var i = 0; i < 1; i++) {
+        var idElement = "actcomercio";
+        if (isScrolledIntoView('#' + idElement)) {
+            if (chartactcomercio[idElement]) { continue }
+            chartactcomercio[idElement] = true;
+
+            var ctx = document.getElementById(idElement);
+
+            if (inViewactcomercio) { return; }
+            inViewactcomercio = true;
+            return new Chart(ctx, {
+                type: 'bar',
+                data: {
+
+                    labels: ['Bajas comerciales', 'Bajas de oficio', 'Altas comerciales', 'Lib. Sanitarias nuevas', 'Renovaciones', 'Inspecciones'],
+                    datasets: [
+                        {
+                            tension: 0.1,
+                            fill: false,
+                            data: [96, 90, 116, 295, 326, 2150],
+                            fill: true,
+                            backgroundColor: ['rgba(71, 123, 168, 1)', 'rgba(105, 190, 190, 1)', 'rgba(215, 90, 218, 0.5)',
+
+
+
+                                'rgba(240, 150, 145, 1)',
+                                'rgba(35, 145, 200, 1)',
+                            ],
+
+
+                            borderWidth: 4,
+                            borderColor: [
+
+                                'rgba(234,238,226,0)'
+                            ],
+
+                        }
+                    ]
+                },
+                options: {
+                    scales: {
+                        y: { ticks: { font: { family: 'Raleway' } } },
+                        x: { ticks: { font: { family: 'Raleway' } } }
+                    },
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+
+                        title: {
+                            display: true,
+                            text: 'Actividades Dirección de Comercio',
+                            align: 'center',
+                            font: {
+                                family: 'Titillium Web',
+                                size: 20,
+                            }
+                        },
+                        legend: {
+                            display: false,
+                            position: 'right',
+                            align: 'middle',
+                            labels: { font: { family: 'Raleway' } }
+                        },
+                    },
+
+
+
+                }
+            });
+        } else {
+            inViewactcomercio = false;
+        }
+    }
+}
+$(window).scroll(function () {
+
+    animaractcomercio();
+
+});
+
+$(window).load(function () {
+
+
+    animaractcomercio();
+
+});

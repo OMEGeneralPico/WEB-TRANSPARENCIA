@@ -357,8 +357,8 @@ text-align: right;
 
 .logo_muni{
   opacity: 0;
-  animation: mainFadeIn 1.5s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
-  animation-delay: 2s;
+  animation: mainFadeIn 0.5s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+  animation-delay: 1.5s;
 }
 
 
@@ -521,7 +521,12 @@ height: 100%;
   text-align: left;
 }
 
-
+.cd-fixed-background p {
+  font-size: calc(7px + 0.7vw);
+  line-height: 1.8;
+  font-family: 'Raleway', sans-serif ;
+  color: #000000 ;
+}
 
  
 /* Color de fondo para cada slide*/
@@ -649,6 +654,8 @@ gap: 1em;
   border-left: solid 5px black;
   padding: 1em;
   width: 70%;
+ 
+
 
 }
 
@@ -744,12 +751,9 @@ gap: 1em;
 
 
   /*letra slides*/
-  .cd-fixed-background p {
-    font-size: calc(7px + 0.7vw);
-    line-height: 1.8;
-    font-family: 'Raleway', sans-serif ;
-    color: #000000 ;
-  }
+
+
+
 .cd-fixed-background h2{
   font-size: calc(20px + 0.8vw);
   font-weight: 600;
