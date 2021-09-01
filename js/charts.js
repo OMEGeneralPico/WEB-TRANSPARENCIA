@@ -1507,12 +1507,12 @@ function animaractcomercio() {
                 type: 'bar',
                 data: {
 
-                    labels: ['Bajas comerciales', 'Bajas de oficio', 'Altas comerciales', 'Lib. Sanitarias nuevas', 'Renovaciones', 'Inspecciones'],
+                    labels: ['Bajas comerciales', 'Bajas de oficio', 'Altas comerciales', 'Lib. Sanitarias nuevas', 'Renovaciones'],
                     datasets: [
                         {
                             tension: 0.1,
                             fill: false,
-                            data: [96, 90, 116, 295, 326, 2150],
+                            data: [96, 90, 116, 295, 326],
                             fill: true,
                             backgroundColor: ['rgba(71, 123, 168, 1)', 'rgba(105, 190, 190, 1)', 'rgba(215, 90, 218, 0.5)',
 

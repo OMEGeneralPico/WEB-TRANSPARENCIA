@@ -29,38 +29,38 @@
    "Infraestructura": 87884473,
    "Obras particulares": 18306375,
    "Planeam.y catastro": 3926454,
-   "Planif.y gestion urbana": 16818108
+   "Planif.y gestión urbana": 16818108
    
    
   },
   "ESPACIOS PUBLICOS": {
    "Ambiente y des.sustentable": 3438039,
-   "Espacios publicos": 48508975,
-   "Gestion ambiental": 11110209,
+   "Espacios públicos": 48508975,
+   "Gestión ambiental": 11110209,
    "R.R.U": 12403500,
    "Sec.de amb. y serv.pub.": 54049163,
-   "Servicios publicos": 200567686,
+   "Servicios públicos": 200567686,
    "Zoonosis y vectores": 9365523
   },
   "DESARROLLO SOCIAL": {
    "Ctos. des. infantil": 34089933,
    "Deportes": 20787789,
    "Dir.de familia": 28919097,
-   "Direccion de juventud": 7885277,
-   "Nuevas economias": 10220898,
-   "Politicas de genero": 2151137,
+   "Dirección de juventud": 7885277,
+   "Nuevas economías": 10220898,
+   "Políticas de género": 2151137,
    "Desarollo social": 45417171,
    "Servicio soc.de base": 30297536,
    "Unidad de niñez": 9762074
    
   },
   "ECONOMIA": {
-   "Contaduria": 21592987,
+   "Contaduría": 21592987,
    "Des.Econom.": 21766856,
    "Control comerc.": 21622863,
    "Rentas": 24724931,
-   "Eeconomia": 5559194,
-   "Tesoreria": 14701597
+   "Eeconomía": 5559194,
+   "Tesorería": 14701597
    
   },
   "ORGANISMOS DESCENTRALIZADOS": {
@@ -69,7 +69,7 @@
    
   },
   "NO PROGRAMATICO": {
-   "Partidas no programaticas": 219181849
+   "Partidas no programáticas": 219181849
 
   }
 }
