@@ -617,7 +617,7 @@ height: 100%;
 
 }
 
-
+/*ACAMOD*/
 
 .grid2 {
   display: grid;
@@ -629,9 +629,15 @@ gap: 1em;
 
   height: 100%;
   width: 61%;
-  align-items: center;
+
   border-left: 5px solid black;
   margin-left: 1em;
+
+}
+
+.grid2-item-a{
+display: grid;
+align-items: center;
 
 }
 
@@ -685,8 +691,10 @@ gap: 1em;
     
   }
   .grid2-item-a{
+ 
     grid-column: 1/ span 2;  
     width: 95%;
+
 
 }
 
@@ -708,6 +716,7 @@ gap: 1em;
   height: 300px;
 
   width: 90%;
+  border: 30%;
 
 }
 .grid-item-a{
@@ -719,8 +728,10 @@ gap: 1em;
 
 }
 
-
-
+.centrador{
+  display: grid;
+  align-items: center;
+}
 
 
 
@@ -740,7 +751,7 @@ gap: 1em;
 
 .grid2-uno3{
   grid-column: 1/span 2;
-  align-items: start;
+
   min-height: 300px;
   min-width: 300px;
   width: 95%;
@@ -1116,6 +1127,13 @@ a.button8{
   font-family: 'Titillium Web' !important;
   text-align: left;
 
+}
+.citas2{
+  font-size: calc(20px + 0.8vw);
+    font-weight: 600;
+    line-height: 1.8;
+    font-family: 'Titillium Web', sans-serif !important;
+    color: #000000 !important;
 }
 
 

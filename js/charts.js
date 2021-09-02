@@ -675,7 +675,7 @@ function animarGobierno() {
                     plugins: {
                         legend: {
                             display: true,
-                            position: 'right',
+                            position: 'top',
                             align: 'middle',
                             labels: { font: { family: 'Raleway' } }
                         },
