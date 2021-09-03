@@ -1060,7 +1060,7 @@ function animarCreditosSector() {
 
                         title: {
                             display: true,
-                            text: 'Monto total créditos por actividad ($)',
+                            text: 'Monto total créditos por actividad (en millones $)',
                             align: 'start',
                             font: {
                                 family: 'Titillium Web',
