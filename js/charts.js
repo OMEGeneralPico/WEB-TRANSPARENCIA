@@ -1006,7 +1006,8 @@ function animarCreditosSector() {
             if (inViewCreditosSector) { return; }
             inViewCreditosSector = true;
             return new Chart(ctx, {
-                type: 'polarArea',
+                plugins: [ChartDataLabels],
+                type: 'doughnut',
                 data: {
 
                     labels: ['Comercio', 'Produccion', 'Servicios'],
@@ -1014,7 +1015,7 @@ function animarCreditosSector() {
                         {
                             tension: 0.1,
                             fill: false,
-                            data: [2250000, 1750000, 1790000],
+                            data: [2.25, 1.75, 1.79],
                             fill: true,
                             backgroundColor: ['rgba(71, 123, 168, 0.75)', 'rgba(105, 190, 190, 0.75)', 'rgba(215, 90, 218, 0.75)'
                             ],
@@ -1044,10 +1045,22 @@ function animarCreditosSector() {
                     },
 
                     plugins: {
+                        datalabels: {
+                            display: 'auto',
+                            formatter: function (value) {
+                              return  '$' + value;
+                            },
+                            color: 'white',
+                            font: {
+                               
+                             
+                              family: 'Raleway'
+                            }
+                          },
 
                         title: {
                             display: true,
-                            text: 'Créditos entregados por actividad ($)',
+                            text: 'Monto total créditos por actividad ($)',
                             align: 'start',
                             font: {
                                 family: 'Titillium Web',
