@@ -644,30 +644,21 @@ function animarGobierno() {
                     datasets: [
 
                         {
-                            label: 'Operativos',
-                            data: [9, 8, 5, 29, 37, 37],
+                            label: 'Radar',
+                            data: [156, 228, 390, 606, 411, 618],
                             backgroundColor: 'rgba(71, 123, 168, 1)',
                         },
                         {
-                            label: 'Controlados',
-                            data: [325, 308, 200, 1562, 2878, 1809],
+                            label: 'Domo',
+                            data: [77, 45, 196, 381, 85, 88],
                             backgroundColor: 'rgba(105, 190, 190, 1)',
                         },
                         {
-                            label: 'Infracciones',
-                            data: [7, 6, 11, 14, 20, 15],
+                            label: 'Fotomultas',
+                            data: [404, 115, 270, 1899, 567, 781],
                             backgroundColor: 'rgba(215, 90, 218, 1)',
                         },
-                        {
-                            label: 'Retenciones',
-                            data: [0, 1, 0, 0, 1, 1],
-                            backgroundColor: 'rgba(153, 070, 135,1)',
-                        },
-                        {
-                            label: 'Insp. agencias/vehiculos',
-                            data: [182, 13, 27, 27, 58, 89],
-                            backgroundColor: 'rgba(240, 150, 145,1)',
-                        },
+
 
                     ]
                 },
@@ -681,7 +672,7 @@ function animarGobierno() {
                         },
                         title: {
                             display: true,
-                            text: 'Actividades área de Inspección',
+                            text: 'Infracciones labradas por medio',
                             align: 'start',
                             font: {
                                 family: 'Titillium Web',
