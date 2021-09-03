@@ -42,7 +42,7 @@ function generarchart(etiquetas, data2, ctx) {
           datalabels: {
             display: 'auto',
             formatter: function (value) {
-              return  '$' + Math.round((value/10)*10)/10;
+              return  '$' + Math.round((value*10))/10;
             },
             color: 'white',
             font: {
