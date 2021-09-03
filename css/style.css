@@ -694,19 +694,22 @@ align-items: center;
  
     grid-column: 1/ span 2;  
     width: 95%;
-
-
-}
-
-  .grid-item{
-
-    grid-column: 1/4;
-    width: 90%;
   }
+  .centrador{
+    justify-items: center;
+
+      grid-column: 1/4;
+      
+    }
+    .grid-item{
+      max-width: 500px;
+    }
 
 
-  
 }
+
+
+
 
 
 .grid-item{
@@ -942,6 +945,12 @@ th{
   .grid-item{
 
     grid-column: 1/4;
+  
+      max-width: 90%;
+
+  }
+  .centrador{  
+    justify-items: normal;
   }
 
 
