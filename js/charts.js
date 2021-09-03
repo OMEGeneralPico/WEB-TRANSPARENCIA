@@ -967,7 +967,7 @@ function animareconomiacreditos() {
                     plugins: {
                         title: {
                             display: true,
-                            text: 'Créditos entregados por fecha ($)',
+                            text: 'Monto total créditos por fecha ($)',
                             align: 'start',
                             font: {
                                 family: 'Titillium Web',

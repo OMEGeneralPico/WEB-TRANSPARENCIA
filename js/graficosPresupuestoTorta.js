@@ -38,10 +38,11 @@ function generarchart(etiquetas, data2, ctx) {
       maintainAspectRatio: false,
       plugins: {
        
+       
           datalabels: {
             display: 'auto',
             formatter: function (value) {
-              if (value>1000000) {return  '$' + Math.round((value/1000000)*10)/10} else return ''  ;
+              return  '$' + Math.round((value/10)*10)/10;
             },
             color: 'white',
             font: {
@@ -53,7 +54,7 @@ function generarchart(etiquetas, data2, ctx) {
         
         title: {
           display: true,
-          text: 'Gasto ejecutado por rubro ($)',
+          text: 'Gasto ejecutado por rubro (en millones $)',
 
           align: 'start',
           font: {
