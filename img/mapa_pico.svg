@@ -2,15 +2,17 @@
 <!-- Creator: CorelDRAW 2020 (64-Bit) -->
 
 <svg
+title = "Mapita"
 id="mapita"
+
    xml:space="preserve"
-width="351px" height="392px"
+
    version="1.1"
    shape-rendering="geometricPrecision"
    text-rendering="geometricPrecision"
    image-rendering="optimizeQuality"
-   fill-rule="eve
-   opacity=""nodd"
+   fill-rule="even"
+   opacity="odd"
    clip-rule="evenodd"
    viewBox="0 0 2008 2244.24"
    id="svg48"
@@ -20,21 +22,20 @@ width="351px" height="392px"
 
 <defs>
  <style type="text/css">
+         
         svg path{
         fill: teal;
-  
-  opacity=""      stroke: white;
+        stroke: white;
 
-        width: 29%;
-        margin: auto;
+        width: 10%;
+        
         transition: fill 0.3s;
-   
-   opacity=""     background-color:white;
+        background-color:white;
         }
         path:hover{
     fill:tomato;
 }
-opacity=""
+
 
 </style>
 </defs>

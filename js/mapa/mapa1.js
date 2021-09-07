@@ -8,13 +8,14 @@ $(document).ready(function () {
   $("#mapitadiv").load("img/mapa_pico.svg", function () {
     $("#mapita").click(function (evt) {
       $("#info").html(
+        "<b style='font-weight: 700;'>Recaudación por servicios </b><br><br>"+
         "Barrio: " +
           myjson[evt.target.id].nombre +
-          "<br> Porcentaje de recaudación: " +
+          "<br> Nivel de recaudación: " +
           myjson[evt.target.id].porcentaje +
           "<br> Cantidad facturada: " +
           myjson[evt.target.id].cantFacturado +
-          "<br> Cantidad Pagada: " +
+          "<br> Cantidad pagada: " +
           myjson[evt.target.id].cantPagado
       );
 

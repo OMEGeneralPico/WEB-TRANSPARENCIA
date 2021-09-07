@@ -1,6 +1,7 @@
 function generarchart(etiquetas, data2, ctx) {
 
   return new Chart(ctx, {
+    plugins: [ChartDataLabels],
     type: 'doughnut',
     data: {
       labels: etiquetas,
@@ -36,9 +37,26 @@ function generarchart(etiquetas, data2, ctx) {
       responsive: true,
       maintainAspectRatio: false,
       plugins: {
+       
+       
+          datalabels: {
+            display: 'auto',
+            formatter: function (value) {
+              return  '$' + Math.round((value*10))/10;
+            },
+            color: 'white',
+            font: {
+               
+             
+              family: 'Raleway'
+            }
+          },
+        
         title: {
           display: true,
-          text: 'Gasto ejecutado por rubro',
+          text: 'Gasto ejecutado por rubro (en millones $)',
+
+          align: 'start',
           font: {
             family: 'Titillium Web',
             size: 20,
@@ -52,7 +70,7 @@ function generarchart(etiquetas, data2, ctx) {
           display: true,
           position: 'right',
           align: 'middle',
-          labels: {font:{ family: 'Raleway' }}
+          labels: { font: { family: 'Raleway' } }
         }
       }
     }

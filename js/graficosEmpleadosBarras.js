@@ -43,6 +43,7 @@ function generarchartbarrasueldos(etiquetas, data2, ctx) {
       maintainAspectRatio: false,
       plugins: {
         title: {
+          align: 'start',
           display: true,
           text: 'Empleados por unidad',
           font: {

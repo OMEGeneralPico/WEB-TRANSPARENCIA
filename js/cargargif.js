@@ -1,48 +1,22 @@
-(function($) {
+function showImages(el) {
+  var windowHeight = jQuery( window ).height();
+  $(el).each(function(){
+      var thisPos = $(this).offset().top;
 
-    $(document).ready(function() {
-      
-      var elementTop, elementBottom, viewportTop, viewportBottom;
-  
-      function isScrolledIntoView(elem) {
-        elementTop = $(elem).offset().top;
-        elementBottom = elementTop + $(elem).outerHeight();
-        viewportTop = $(window).scrollTop();
-        viewportBottom = viewportTop + $(window).height();
-        return (elementBottom > viewportTop && elementTop < viewportBottom);
+      var topOfWindow = $(window).scrollTop();
+      if (topOfWindow + windowHeight - 200 > thisPos ) {
+          $(this).addClass("fadeInLogo");
       }
-      
-        if($('img[src$="webp"]').length){
-  
-        var gifSrc, srcGif;
-  
-        $('img[src$="webp"]').each(function(){
-          gifSrc = $(this).attr('src');
-          $(this).attr('data-gif', gifSrc);
-        });
-  
-        $(window).on('scroll.gifrun', function() {
-  
-          $('img[src$="webp"]').each(function(){
-  
-            srcGif = $(this).attr('data-gif'); 
-  
-            if (!(isScrolledIntoView(this) === true)) {
-              $(this).attr('src', srcGif);
-            } else {
-              if($(this).attr('src') == srcGif){
-                // do nothing
-              } else {
-                $(this).attr('src', srcGif);
-              }
-            }
-          });
-        
-        });	 /* end $(window).on('scroll.gifrun') */
-  
-      } /* end img[src$="gif"] */
-      
-    
-    });
-    
-  })(jQuery);
+  });
+}
+
+// if the image in the window of browser when the page is loaded, show that image
+$(document).ready(function(){
+  showImages('.logo_muni2');
+});
+
+// if the image in the window of browser when scrolling the page, show that image
+$(window).scroll(function() {
+  showImages('.logo_muni2');
+});
+

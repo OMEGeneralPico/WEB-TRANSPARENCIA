@@ -27,38 +27,38 @@
    "Infraestructura": 14,
    "Obras particulares": 17,
    "Planeam.y catastro": 2,
-   "Planif.y gestion urbana": 1
+   "Planif.y gestión urbana": 1
    
    
   },
   "ESPACIOS PUBLICOS": {
-   "Ambiente y des.sustentable": 3,
-   "Espacios publicos": 34,
-   "Gestion ambiental": 8,
+   "Ambiente": 3,
+   "Espacios públicos": 34,
+   "Gestión ambiental": 8,
 
-   "Sec.de amb. y serv.pub.": 51,
-   "Servicios publicos": 193,
+   "Sec.de amb. y serv.pub.": 43,
+   "Servicios públicos": 191,
    "Zoonosis y vectores": 4
   },
   "DESARROLLO SOCIAL": {
    "Ctos. des. infantil": 36,
    "Deportes": 16,
    "Dir.de familia": 33,
-   "Direccion de juventud": 11,
-   "Nuevas economias": 7,
-   "Politicas de genero": 1,
+   "Dirección de juventud": 11,
+   "Nuevas economías": 7,
+   "Politicas de género": 1,
    "Desarollo social": 13,
    "Servicio soc.de base": 48,
    "Unidad de niñez": 1
    
   },
   "ECONOMIA": {
-   "Contaduria": 18,
-   "Des.Econom.": 8,
+   "Contaduría": 18,
+   "Des.Econom.": 6,
    "Control comerc.": 24,
    "Rentas": 28,
-   "Eeconomia": 4,
-   "Tesoreria": 13
+   "Eeconomía": 4,
+   "Tesorería": 13
    
   },
   "ORGANISMOS DESCENTRALIZADOS": {
