@@ -296,7 +296,7 @@ text-align: right;
   }
 
 
-}
+
 
 .no-js .cd-vertical-nav {
   display: none;
@@ -883,6 +883,9 @@ th{
 
 
 
+.texto-info-mapa{
+  font-size: xx-large;font-weight: 600; width:100%; 
+}
 
 /*Mobile */
 @media only screen and (max-width: 500px) {
@@ -1018,7 +1021,7 @@ th{
   }
 
   .ancho-mobile{
-    width: 95vh;
+    width: 90vh;
   }
 
   .mouse {
