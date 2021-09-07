@@ -59,7 +59,7 @@ Main Components
   font-weight: bolder;
   color: #f3f3f3;
 text-align: right;
-  font-size: calc(1em + 2vw);
+  font-size: calc(1em + 1vw + 1vh);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: absolute;
@@ -133,7 +133,7 @@ text-align: right;
   display: block;
   content: "General Pico";
   font-family: 'Raleway';
-  font-size: calc(0.2em + 2vw);
+  font-size: calc(0.2em + 1vw + 1vh);
   font-weight: 400;
 }
 
@@ -522,7 +522,7 @@ height: 100%;
 }
 
 .cd-fixed-background p {
-  font-size: calc(7px + 0.7vw);
+  font-size: calc(7px + 0.3vw + 0.3vh);
   line-height: 1.8;
   font-family: 'Raleway', sans-serif ;
   color: #000000 ;
@@ -572,7 +572,7 @@ height: 100%;
   padding: 1em;
 
 
-    width: calc(750px + 10vw) ;
+    width: calc(750px + 5vw + 5vh) ;
     text-align: justify;
     max-width: 90%;
   
@@ -773,7 +773,7 @@ align-items: center;
 
 
 .cd-fixed-background h2{
-  font-size: calc(20px + 0.8vw);
+  font-size: calc(20px + 0.4vw 0.4vh);
   font-weight: 600;
   line-height: 1.8;
   font-family: 'Titillium Web', sans-serif !important;
@@ -791,7 +791,7 @@ align-items: center;
 }
 
 .noesconder{
-  font-size: calc(30px + 0.8vw);
+  font-size: calc(30px + 0.4vw + 0.4vh);
   font-weight: 700;
   line-height: 1.8;
   font-family: 'Titillium Web', sans-serif !important;
@@ -824,7 +824,7 @@ table {
   width: 90%;
   height: 90%;
   border-right: 2px solid black;
-  font-size: calc(7px + 0.7vw);
+  font-size: calc(7px + 0.3vw + 0.3vh);
 
 }
 
@@ -832,7 +832,7 @@ td, th {
 
   text-align: center;
   padding: calc(2px 10vw);
-  font-size: calc(9px + 0.7vw);
+  font-size: calc(9px + 0.3vw + 0.3vh);
 }
 tr:nth-child(odd) {
   background-color:rgba(114, 114, 114, 0.15);
@@ -843,7 +843,7 @@ th{
 
 @media only screen and (max-width: 1150px) {
   .esconder{
-    font-size: calc(30px + 0.8vw);
+    font-size: calc(30px + 0.4vw + 0.4vh);
     font-weight: 700;
     line-height: 1.8;
     font-family: 'Titillium Web', sans-serif !important;
@@ -1136,7 +1136,7 @@ a.button8{
   
 .titulo-IntroCierre{
   text-align: start;
-  width: calc(750px + 10vw);
+  width: calc(750px + 5vw + 5vh);
   max-width: 90%;
 }
 
@@ -1215,7 +1215,7 @@ opacity: 0;
   border-top: 10px solid black;
   background-color: rgba(255, 255, 255, 0.7);
   padding: 1em;
-  width: calc(200px + 20vw);
+  width: calc(200px + 10vw + 10vh);
 
 
 

@@ -15,5 +15,6 @@ if (document.body.clientWidth > 1400) {
     console.log('entro')
     
   }else{
+    document.body.style.zoom  = 0.90;
       console.log('fallo')
   }
