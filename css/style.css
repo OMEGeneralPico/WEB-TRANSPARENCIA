@@ -693,6 +693,9 @@ align-items: center;
 
 
 @media only screen and (max-width: 1150px) {
+  .grid-primera{
+    margin: 0px;
+  }
   
   .grid0{
     grid-template-columns: 50% 50%;
@@ -792,7 +795,7 @@ align-items: center;
   align-items: center;
   min-height: 300px;
   min-width: 300px;
-  width: 95%;
+
 }
 
 
@@ -801,7 +804,7 @@ align-items: center;
 
   min-height: 300px;
   min-width: 300px;
-  width: 95%;
+
 }
 
 
@@ -944,7 +947,7 @@ th{
 
   
   .grid-primera-item{
-    width: 90%;
+
     margin:0%;
   }
  
@@ -991,10 +994,6 @@ th{
   
   }
   
-  .grid-primera-item{
-    width: 90%;
-
-  }
 
   .grid-item-a{
     width:100%;
