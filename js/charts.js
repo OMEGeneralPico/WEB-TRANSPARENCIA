@@ -138,7 +138,7 @@ function animarrecursossecre() {
                 data: {
 
                     /*labels: ['Jurisd. Comunal', 'Otras Jurisd.', 'Ant. Coparticipación', 'Rec. de capital', 'Aportes no reint.'],*/
-                    labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Junio'],
+                    labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo','Junio'],
                     datasets: [
                         {
                             label: 'Recursos propios',
